@@ -15,10 +15,9 @@
   --acc:#e6a817;--acc2:#b8820e;
   --green:#3fb950;--red:#f85149;--blue:#58a6ff;--purple:#bc8cff;--orange:#ffa657;
 }
-body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;line-height:1.5;min-height:100vh}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;line-height:1.5;min-height:100vh}
 .screen{display:none;min-height:100vh}.screen.active{display:flex;flex-direction:column}
-
-/* ── LOGIN ── */
+/* LOGIN */
 #sc-login{align-items:center;justify-content:center}
 .lcard{background:var(--s1);border:1px solid var(--b1);border-radius:10px;padding:40px 44px;width:360px}
 .lbrand{display:flex;align-items:center;gap:10px;margin-bottom:32px}
@@ -30,40 +29,35 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
 .lf input{width:100%;background:var(--bg);border:1px solid var(--b1);border-radius:6px;padding:9px 12px;color:var(--tx);font-size:13px;outline:none;transition:border-color .15s}
 .lf input:focus{border-color:var(--acc)}
 .lerr{font-size:11px;color:var(--red);margin-top:6px;display:none}
-.lbtn{width:100%;background:var(--acc);border:none;border-radius:6px;padding:11px;color:#000;font-weight:700;font-size:13px;cursor:pointer;margin-top:4px;transition:background .15s}
+.lbtn{width:100%;background:var(--acc);border:none;border-radius:6px;padding:11px;color:#000;font-weight:700;font-size:13px;cursor:pointer;margin-top:4px}
 .lbtn:hover{background:var(--acc2)}
 .lmoto{margin-top:20px;padding-top:16px;border-top:1px solid var(--b1);text-align:center;font-size:11px;color:var(--muted)}
 .lmoto a{color:var(--acc);text-decoration:none}
-
-/* ── TOPBAR ── */
+/* TOPBAR */
 .topbar{background:var(--s1);border-bottom:1px solid var(--b1);height:44px;padding:0 20px;display:flex;align-items:center;flex-shrink:0;position:sticky;top:0;z-index:100}
 .tbrand{display:flex;align-items:center;gap:8px;padding-right:20px;border-right:1px solid var(--b1);margin-right:4px}
 .tbrand .ico{width:24px;height:24px;background:var(--acc);border-radius:4px;display:flex;align-items:center;justify-content:center}
 .tbrand .ico svg{width:12px;height:12px}
 .tbrand span{font-size:13px;font-weight:700;color:#fff}
-.navtabs{display:flex;flex:1;padding-left:4px}
-.ntab{padding:0 16px;height:44px;display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:var(--muted);cursor:pointer;border:none;border-bottom:2px solid transparent;background:none;transition:all .15s;white-space:nowrap}
+.navtabs{display:flex;flex:1;padding-left:4px;overflow-x:auto}
+.ntab{padding:0 14px;height:44px;display:flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:var(--muted);cursor:pointer;border:none;border-bottom:2px solid transparent;background:none;transition:all .15s;white-space:nowrap;flex-shrink:0}
 .ntab:hover{color:var(--tx)}.ntab.active{color:var(--acc);border-bottom-color:var(--acc)}
-.ntab svg{width:12px;height:12px;fill:currentColor;opacity:.7}
-.tright{display:flex;align-items:center;gap:10px;margin-left:auto}
-.tclock{font-family:'SF Mono','Consolas',monospace;font-size:12px;color:var(--muted);background:var(--bg);border:1px solid var(--b1);padding:3px 10px;border-radius:4px}
+.tright{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
+.tclock{font-family:'SF Mono','Consolas',monospace;font-size:12px;color:var(--muted);background:var(--bg);border:1px solid var(--b1);padding:3px 9px;border-radius:4px}
 .tpill{font-size:10px;font-weight:700;padding:3px 8px;border-radius:3px}
 .tpill.on{background:rgba(63,185,80,.12);color:var(--green);border:1px solid rgba(63,185,80,.25)}
 .tpill.off{background:rgba(248,81,73,.1);color:var(--red);border:1px solid rgba(248,81,73,.25)}
-.tbtn{background:none;border:1px solid var(--b1);border-radius:4px;padding:4px 10px;color:var(--muted);font-size:11px;cursor:pointer;transition:all .15s}
+.tbtn{background:none;border:1px solid var(--b1);border-radius:4px;padding:4px 9px;color:var(--muted);font-size:11px;cursor:pointer}
 .tbtn:hover{border-color:var(--b2);color:var(--tx)}
-
-/* ── LAYOUT ── */
+/* LAYOUT */
 .mcontent{flex:1;overflow:auto;padding:14px 18px;display:flex;flex-direction:column;gap:12px}
-
-/* ── PANEL ── */
+/* PANEL */
 .panel{background:var(--s1);border:1px solid var(--b1);border-radius:7px;overflow:hidden}
 .phead{padding:9px 14px;border-bottom:1px solid var(--b1);display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .ptitle{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:flex;align-items:center;gap:6px}
 .dot{width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0}
 .dg{background:var(--green)}.da{background:var(--acc)}.db{background:var(--blue)}.dr{background:var(--red)}.dm{background:var(--b3)}.dp{background:var(--purple)}
-
-/* ── KPI STRIP ── */
+/* KPI */
 .kstrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(--b1);border:1px solid var(--b1);border-radius:7px;overflow:hidden}
 .kpi{background:var(--s1);padding:11px 14px}
 .kl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:3px}
@@ -72,48 +66,43 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
 .ks{font-size:10px;color:var(--muted);margin-top:2px}
 .pbar{height:5px;background:var(--b1);border-radius:3px;overflow:hidden;margin-top:5px}
 .pfill{height:100%;background:linear-gradient(90deg,var(--acc2),var(--acc));border-radius:3px;transition:width .4s}
-
-/* ── BUTTONS ── */
+/* BUTTONS */
 .btn{padding:5px 12px;border-radius:5px;border:1px solid var(--b1);background:var(--s2);color:var(--tx);font-size:11px;font-weight:600;cursor:pointer;transition:all .15s;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
 .btn:hover{border-color:var(--b2);background:var(--b1)}
 .btn.g{background:#1a3a1e;border-color:#2ea043;color:var(--green)}.btn.g:hover{background:#2ea043;color:#000}
 .btn.r{background:#3a1a1a;border-color:var(--red);color:var(--red)}.btn.r:hover{background:var(--red);color:#fff}
 .btn.a{background:#3a2f00;border-color:var(--acc);color:var(--acc)}.btn.a:hover{background:var(--acc);color:#000}
 .btn.b{background:#0a1f3a;border-color:var(--blue);color:var(--blue)}.btn.b:hover{background:var(--blue);color:#000}
-
-/* ── FORM ── */
+.btn.p{background:#2a1a40;border-color:var(--purple);color:var(--purple)}.btn.p:hover{background:var(--purple);color:#000}
+/* FORM */
 .frow{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-end;padding:10px 14px}
 .fld{display:flex;flex-direction:column;gap:3px}
 .fld label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .fld input,.fld select{background:var(--bg);border:1px solid var(--b1);border-radius:5px;padding:6px 9px;color:var(--tx);font-size:12px;outline:none;transition:border-color .15s}
 .fld input:focus,.fld select:focus{border-color:var(--acc)}
 .fld select option{background:var(--s2)}
-
-/* ── DRAG LISTS ── */
-.drag-list{border:1px solid var(--b1);border-radius:6px;background:var(--bg);overflow:hidden;display:flex;flex-direction:column;min-width:0}
-.dlhead{padding:8px 12px;background:var(--s2);border-bottom:1px solid var(--b1);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+/* DRAG LISTS */
+.drag-list{border:1px solid var(--b1);border-radius:6px;background:var(--bg);overflow:hidden;display:flex;flex-direction:column}
+.dlhead{padding:8px 12px;background:var(--s2);border-bottom:1px solid var(--b1);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);display:flex;align-items:center;justify-content:space-between}
 .dlhead .cnt{font-family:'SF Mono','Consolas',monospace;font-size:11px;color:var(--acc);font-weight:800}
 .dl-items{overflow-y:auto}
 .di{padding:8px 12px;border-bottom:1px solid rgba(48,54,61,.5);display:flex;align-items:center;gap:9px;cursor:grab;user-select:none;transition:background .12s}
 .di:last-child{border-bottom:none}
 .di:hover{background:var(--s2)}
 .di.dragging{opacity:.3;cursor:grabbing}
-.di-av{width:28px;height:28px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#000;flex-shrink:0;font-family:'SF Mono','Consolas',monospace;letter-spacing:.02em}
+.di-av{width:28px;height:28px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#000;flex-shrink:0;font-family:'SF Mono','Consolas',monospace}
 .di-info{flex:1;min-width:0}
 .di-name{font-size:11px;font-weight:600;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .di-sub{font-size:9px;color:var(--muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.di-handle{color:var(--b3);font-size:13px;flex-shrink:0;line-height:1}
-.di-badge{font-size:8px;font-weight:700;padding:2px 6px;border-radius:3px;flex-shrink:0;white-space:nowrap}
-.bdup{background:rgba(230,168,23,.15);color:var(--acc)}
-.bmot{background:rgba(88,166,255,.15);color:var(--blue)}
+.di-handle{color:var(--b3);font-size:13px;flex-shrink:0}
+.di-badge{font-size:8px;font-weight:700;padding:2px 6px;border-radius:3px;flex-shrink:0}
+.bdup{background:rgba(230,168,23,.15);color:var(--acc)}.bmot{background:rgba(88,166,255,.15);color:var(--blue)}
+.bcart{background:rgba(248,81,73,.15);color:var(--red)}
 .dl-empty{padding:20px 12px;font-size:10px;color:var(--muted);text-align:center;font-style:italic;line-height:1.7}
-
-/* ── ALOCAÇÃO: layout duplas+motos lado a lado, docas abaixo ── */
-.aloc-pools{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px 14px 8px}
+/* ALOC */
+.aloc-pools{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:12px 14px 8px}
 .aloc-hint{padding:0 14px 10px;font-size:10px;color:var(--muted);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.aloc-hint span{display:flex;align-items:center;gap:5px}
-
-/* ── DOCAS GRID ── */
+/* DOCAS */
 .docas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;padding:0 14px 14px}
 .doca{border:1px solid var(--b1);border-radius:6px;padding:9px 8px;min-height:138px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;transition:border-color .15s,background .15s;background:var(--bg);position:relative}
 .doca.over{background:rgba(230,168,23,.07);border-color:var(--acc);border-style:dashed}
@@ -128,72 +117,61 @@ body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSyst
 .doca-num{font-family:'SF Mono','Consolas',monospace;font-size:9px;font-weight:700;color:var(--muted);letter-spacing:.04em}
 .doca-badge{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:2px 6px;border-radius:3px}
 .db-livre{background:rgba(110,118,129,.1);color:var(--muted)}
-.db-dup{background:rgba(63,185,80,.15);color:var(--green)}
-.db-mot{background:rgba(88,166,255,.15);color:var(--blue)}
-.db-both{background:rgba(188,140,255,.15);color:var(--purple)}
-.db-cart{background:rgba(248,81,73,.15);color:var(--red)}
+.db-dup{background:rgba(63,185,80,.15);color:var(--green)}.db-mot{background:rgba(88,166,255,.15);color:var(--blue)}
+.db-both{background:rgba(188,140,255,.15);color:var(--purple)}.db-cart{background:rgba(248,81,73,.15);color:var(--red)}
 .doca-slots{display:flex;flex-direction:column;gap:2px;width:100%}
 .slot{font-size:9px;padding:3px 5px;border-radius:3px;display:flex;align-items:center;gap:4px;width:100%;text-align:left}
 .slot-g{background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.2);color:var(--green)}
 .slot-b{background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.2);color:var(--blue)}
+.slot-r{background:rgba(248,81,73,.1);border:1px solid rgba(248,81,73,.2);color:var(--red)}
 .slot-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
 .slot-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--tx)}
-.slot-rm{background:none;border:none;color:var(--muted);cursor:pointer;font-size:10px;padding:0 1px;line-height:1;margin-left:auto;flex-shrink:0}
+.slot-rm{background:none;border:none;color:var(--muted);cursor:pointer;font-size:10px;padding:0 1px;line-height:1;margin-left:auto}
 .slot-rm:hover{color:var(--red)}
 .doca-timer{font-family:'SF Mono','Consolas',monospace;font-size:11px;font-weight:700;color:var(--acc)}
 .doca-eff{font-size:9px;color:var(--muted)}
 .doca-drop-hint{font-size:8px;color:var(--b3);margin-top:2px}
 .doca-actions{display:flex;flex-direction:column;gap:3px;width:100%;margin-top:auto}
 .doca-actions .btn{font-size:9px;padding:3px 6px;width:100%;justify-content:center}
-
-/* ── FILA DE ESPERA (horizontal scroll de cards draggáveis) ── */
+/* FILA */
 .fila-scroll{overflow-x:auto;padding:14px 16px 18px;display:flex;gap:10px;min-height:130px;align-items:flex-start}
-.fila-scroll::-webkit-scrollbar{height:5px}.fila-scroll::-webkit-scrollbar-track{background:var(--bg)}.fila-scroll::-webkit-scrollbar-thumb{background:var(--b2);border-radius:3px}
+.fila-scroll::-webkit-scrollbar{height:5px}.fila-scroll::-webkit-scrollbar-thumb{background:var(--b2);border-radius:3px}
 .fila-card{background:var(--bg);border:1px solid var(--b1);border-radius:7px;padding:12px 14px;min-width:190px;max-width:210px;flex-shrink:0;cursor:grab;user-select:none;display:flex;flex-direction:column;gap:8px;transition:background .12s,border-color .12s,transform .1s}
 .fila-card:hover{background:var(--s2);border-color:var(--b2);transform:translateY(-2px)}
-.fila-card.dragging{opacity:.3;cursor:grabbing;transform:scale(.97)}
+.fila-card.dragging{opacity:.3;cursor:grabbing}
 .fc-top{display:flex;align-items:center;gap:10px}
 .fc-av{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#000;flex-shrink:0;font-family:'SF Mono','Consolas',monospace}
-.fc-nome{font-size:12px;font-weight:700;color:var(--tx);line-height:1.3;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.fc-emp{font-size:10px;color:var(--muted);margin-top:1px}
+.fc-nome{font-size:12px;font-weight:700;color:var(--tx);line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fc-emp{font-size:10px;color:var(--muted)}
 .fc-pkgs{font-family:'SF Mono','Consolas',monospace;font-size:12px;font-weight:700;color:var(--acc)}
 .fc-pos{font-size:10px;color:var(--muted);display:flex;align-items:center;gap:5px}
 .pos-num{background:var(--s2);border:1px solid var(--b1);border-radius:3px;padding:1px 6px;font-weight:700;font-family:'SF Mono','Consolas',monospace;color:var(--acc);font-size:10px}
 .fc-handle{font-size:10px;color:var(--b3);text-align:center;border-top:1px solid var(--b1);padding-top:6px;margin-top:2px}
 .fila-empty{display:flex;align-items:center;justify-content:center;width:100%;font-size:11px;color:var(--muted);font-style:italic;padding:10px 0}
-
-/* ── GRÁFICO + LOG espaçosos ── */
+/* BOTTOM GRID */
 .bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .cw{padding:14px 16px}.cw canvas{max-height:220px}
 .log-wrap{padding:12px 16px;max-height:260px;overflow-y:auto}
-.log-wrap::-webkit-scrollbar{width:4px}.log-wrap::-webkit-scrollbar-track{background:var(--bg)}.log-wrap::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
+.log-wrap::-webkit-scrollbar{width:4px}.log-wrap::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
 .lentry{display:flex;gap:10px;padding:5px 0;border-bottom:1px solid rgba(48,54,61,.4);font-size:11px}
 .lentry:last-child{border-bottom:none}
 .lt{font-family:'SF Mono','Consolas',monospace;font-size:10px;color:var(--muted);white-space:nowrap;min-width:58px;padding-top:2px}
 .ld{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:4px}
 .lm{color:var(--tx);line-height:1.5}
-
-/* ── PRODUTIVIDADE ── */
+/* PRODUTIVIDADE */
 .prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px;padding:12px 14px}
 .pcard{background:var(--bg);border:1px solid var(--b1);border-radius:6px;padding:10px 12px}
 .pc-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .pc-av{width:26px;height:26px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#000;flex-shrink:0;font-family:'SF Mono','Consolas',monospace}
 .pc-name{font-size:11px;font-weight:700;color:var(--tx);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pc-doca{font-family:'SF Mono','Consolas',monospace;font-size:10px;color:var(--muted);flex-shrink:0}
-.pc-metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:7px}
-.pm{background:var(--s2);border-radius:4px;padding:4px 6px;text-align:center}
-.pm-v{font-size:13px;font-weight:800;font-family:'SF Mono','Consolas',monospace;line-height:1}
+.pc-metrics{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:7px}
+.pm{background:var(--s2);border-radius:4px;padding:5px 7px;text-align:center}
+.pm-v{font-size:14px;font-weight:800;font-family:'SF Mono','Consolas',monospace;line-height:1}
 .pm-l{font-size:8px;color:var(--muted);margin-top:2px}
-.pc-bar-wrap{}
-.pc-bar-hd{display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin-bottom:3px}
-.pc-bar{height:4px;background:var(--b1);border-radius:2px;overflow:hidden}
-.pc-bar-fill{height:100%;border-radius:2px;transition:width .5s}
-.pc-rating{font-size:9px;display:flex;align-items:center;gap:5px;margin-top:5px}
-.pc-rdot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
-.pc-sub2{font-size:9px;color:var(--blue);margin-top:1px}
+.pc-sub2{font-size:9px;color:var(--blue);margin-top:2px}
 .prod-empty{padding:20px 14px;text-align:center;font-size:11px;color:var(--muted);grid-column:1/-1}
-
-/* ── DASHBOARD ── */
+/* DASHBOARD */
 .dash-g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .dash-g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
 .twrap{overflow-x:auto}
@@ -211,9 +189,35 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
 .ch-legend{display:flex;flex-wrap:wrap;gap:12px;padding:8px 14px;border-top:1px solid var(--b1)}
 .ch-li{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--muted)}
 .ch-sw{width:12px;height:3px;border-radius:2px}
-@media(max-width:900px){.dash-g2,.dash-g3,.bottom-grid{grid-template-columns:1fr}}
-
-/* ── MOTORISTA PORTAL ── */
+/* HISTORICO */
+.hist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;padding:12px 14px}
+.hist-card{background:var(--bg);border:1px solid var(--b1);border-radius:6px;padding:12px 14px}
+.hist-date{font-family:'SF Mono','Consolas',monospace;font-size:11px;font-weight:700;color:var(--acc);margin-bottom:8px}
+.hist-row{display:flex;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid rgba(48,54,61,.4)}
+.hist-row:last-child{border-bottom:none}
+.hist-k{color:var(--muted)}.hist-v{font-weight:600;color:var(--tx)}
+/* CARRETAS */
+.cart-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;padding:12px 14px}
+.cart-card{background:var(--bg);border:1px solid var(--b1);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.cart-card.active{border-color:var(--red)}
+.cart-title{display:flex;align-items:center;justify-content:space-between}
+.cart-id{font-family:'SF Mono','Consolas',monospace;font-size:12px;font-weight:700;color:var(--tx)}
+.cart-status{font-size:9px;font-weight:700;padding:2px 7px;border-radius:3px}
+.cs-active{background:rgba(248,81,73,.15);color:var(--red)}
+.cs-done{background:rgba(63,185,80,.15);color:var(--green)}
+.cart-timer{font-family:'SF Mono','Consolas',monospace;font-size:20px;font-weight:800;color:var(--acc)}
+.cart-row{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);align-items:center}
+.cart-row span:last-child{color:var(--tx);font-weight:600;font-family:'SF Mono','Consolas',monospace}
+.cart-inp{background:var(--s2);border:1px solid var(--b1);border-radius:4px;padding:4px 7px;color:var(--tx);font-size:11px;outline:none;width:70px;text-align:center}
+.cart-inp:focus{border-color:var(--acc)}
+/* MODAL */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:500;display:none;align-items:center;justify-content:center}
+.modal-bg.open{display:flex}
+.modal{background:var(--s1);border:1px solid var(--b1);border-radius:8px;padding:22px;width:340px;max-width:95vw}
+.modal h3{font-size:13px;font-weight:700;color:#fff;margin-bottom:7px}
+.modal p{font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.mbtns{display:flex;gap:8px;justify-content:flex-end}
+/* MOTORISTA PORTAL */
 #sc-moto{align-items:center;justify-content:center;background:var(--bg);flex:1}
 .mwrap{width:100%;max-width:400px;padding:20px}
 .mcard{background:var(--s1);border:1px solid var(--b1);border-radius:9px;overflow:hidden}
@@ -232,23 +236,16 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
 .mabtn{width:100%;padding:12px;border:none;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px;transition:all .15s}
 .mabtn.g{background:var(--green);color:#000}.mabtn.g:hover{background:#4dd860}
 .mabtn.r{background:var(--red);color:#fff}.mabtn.r:hover{background:#ff6459}
-.mabtn.x{background:var(--s2);color:var(--tx);border:1px solid var(--b1)}.mabtn.x:hover{border-color:var(--b2)}
+.mabtn.x{background:var(--s2);color:var(--tx);border:1px solid var(--b1)}
 .emp-add{display:flex;gap:6px;margin-top:6px}
 .emp-add input{flex:1;background:var(--bg);border:1px solid var(--b1);border-radius:5px;padding:6px 9px;color:var(--tx);font-size:12px;outline:none}
 .emp-add input:focus{border-color:var(--acc)}
-
-/* ── MODAL ── */
-.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:500;display:none;align-items:center;justify-content:center}
-.modal-bg.open{display:flex}
-.modal{background:var(--s1);border:1px solid var(--b1);border-radius:8px;padding:22px;width:320px}
-.modal h3{font-size:13px;font-weight:700;color:#fff;margin-bottom:7px}
-.modal p{font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:14px}
-.mbtns{display:flex;gap:8px;justify-content:flex-end}
+@media(max-width:900px){.dash-g2,.dash-g3,.bottom-grid,.aloc-pools{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<!-- ════ LOGIN ════ -->
+<!-- LOGIN -->
 <div id="sc-login" class="screen active">
   <div class="lcard">
     <div class="lbrand">
@@ -263,7 +260,7 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
   </div>
 </div>
 
-<!-- ════ APP ════ -->
+<!-- APP -->
 <div id="sc-app" class="screen">
   <div class="topbar">
     <div class="tbrand">
@@ -272,11 +269,19 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
     </div>
     <div class="navtabs">
       <button class="ntab active" onclick="setTab('gestao',this)">
-        <svg viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+        <svg viewBox="0 0 16 16" fill="currentColor" width="12" height="12"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
         Doca em Tempo Real
       </button>
+      <button class="ntab" onclick="setTab('carretas',this)">
+        <svg viewBox="0 0 16 16" fill="currentColor" width="12" height="12"><path d="M1 4h10v7H1zm10 2l4 2v5h-4z"/><circle cx="4" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/></svg>
+        Carretas
+      </button>
+      <button class="ntab" onclick="setTab('historico',this)">
+        <svg viewBox="0 0 16 16" fill="currentColor" width="12" height="12"><rect x="1" y="2" width="14" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 1v3M11 1v3M1 6h14"/><rect x="4" y="9" width="2" height="2" rx=".5"/><rect x="7" y="9" width="2" height="2" rx=".5"/><rect x="10" y="9" width="2" height="2" rx=".5"/></svg>
+        Histórico
+      </button>
       <button class="ntab" onclick="setTab('dash',this)">
-        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1 14V8h3v6H1zm4-8v8h3V6H5zm4 3v5h3V9H9zm4-5v10h2V4h-2z"/></svg>
+        <svg viewBox="0 0 16 16" fill="currentColor" width="12" height="12"><path d="M1 14V8h3v6H1zm4-8v8h3V6H5zm4 3v5h3V9H9zm4-5v10h2V4h-2z"/></svg>
         Dashboard & Analytics
       </button>
     </div>
@@ -287,10 +292,8 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
     </div>
   </div>
 
-  <!-- ── TAB GESTÃO ── -->
+  <!-- TAB GESTÃO -->
   <div id="tab-gestao" class="mcontent">
-
-    <!-- KPIs -->
     <div class="kstrip">
       <div class="kpi">
         <div class="kl">Meta de Pacotes</div>
@@ -299,25 +302,31 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
           <button class="btn a" onclick="G.setMeta()" style="padding:3px 8px;font-size:10px">✓</button>
         </div>
       </div>
-      <div class="kpi"><div class="kl">Descarregados</div><div class="kv g" id="kDesc">0</div><div class="ks">pacotes</div></div>
+      <div class="kpi"><div class="kl">Descarregados Hoje</div><div class="kv g" id="kDesc">0</div><div class="ks">pacotes</div></div>
       <div class="kpi"><div class="kl">Docas Ativas</div><div class="kv b" id="kAtivas">0</div><div class="ks">de 13</div></div>
-      <div class="kpi"><div class="kl">Duplas na Doca</div><div class="kv a" id="kDuplas">0</div><div class="ks">trabalhando</div></div>
-      <div class="kpi"><div class="kl">Motoristas na Doca</div><div class="kv p" id="kMotos">0</div><div class="ks">descarregando</div></div>
-      <div class="kpi"><div class="kl">Na Fila</div><div class="kv" id="kFila">0</div><div class="ks">aguardando</div></div>
+      <div class="kpi"><div class="kl">Duplas na Doca</div><div class="kv a" id="kDuplas">0</div></div>
+      <div class="kpi"><div class="kl">Motoristas na Doca</div><div class="kv p" id="kMotos">0</div></div>
+      <div class="kpi"><div class="kl">Na Fila</div><div class="kv" id="kFila">0</div></div>
       <div class="kpi" style="grid-column:span 2">
         <div class="kl">Progresso da Meta</div>
         <div style="display:flex;align-items:baseline;gap:8px;margin:2px 0 4px"><div class="kv" id="kPct">0%</div><div class="ks" id="kSub">0 / 5.000</div></div>
         <div class="pbar"><div class="pfill" id="kBar" style="width:0%"></div></div>
       </div>
+      <div class="kpi">
+        <div class="kl">Ações do Dia</div>
+        <div style="display:flex;flex-direction:column;gap:4px;margin-top:4px">
+          <button class="btn a" onclick="G.fecharDia()" style="font-size:10px;padding:4px 8px">💾 Fechar Dia</button>
+          <button class="btn r" onclick="G.resetarDia()" style="font-size:10px;padding:4px 8px">↺ Resetar</button>
+        </div>
+      </div>
     </div>
 
-    <!-- CADASTRO DE DUPLA -->
+    <!-- Duplas -->
     <div class="panel">
       <div class="phead">
         <div class="ptitle"><span class="dot da"></span>Duplas de Trabalho</div>
         <div style="display:flex;gap:6px">
-          <button class="btn a" id="btnFD" onclick="G.toggleForm()">+ Nova Dupla</button>
-          <button class="btn r" onclick="G.addCarreta()">+ Carreta Manual</button>
+          <button class="btn a" onclick="G.toggleForm()">+ Nova Dupla</button>
         </div>
       </div>
       <div id="formDupla" style="display:none;border-top:1px solid var(--b1)">
@@ -329,48 +338,47 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
       </div>
     </div>
 
-    <!-- ALOCAÇÃO: duplas + motoristas → docas -->
+    <!-- Alocação -->
     <div class="panel">
       <div class="phead">
         <div class="ptitle"><span class="dot da"></span>Alocar nas Docas — arraste para a doca desejada</div>
-        <div style="display:flex;gap:12px;font-size:10px;color:var(--muted)">
+        <div style="display:flex;gap:10px;font-size:10px;color:var(--muted)">
           <span><span class="dot dg" style="display:inline-block"></span> Dupla</span>
           <span><span class="dot db" style="display:inline-block"></span> Motorista</span>
-          <span><span class="dot dp" style="display:inline-block"></span> Dupla + Moto</span>
+          <span><span class="dot dr" style="display:inline-block"></span> Carreta</span>
         </div>
       </div>
-
-      <!-- Pools lado a lado -->
       <div class="aloc-pools">
         <div class="drag-list">
           <div class="dlhead">Duplas disponíveis <span class="cnt" id="cntDuplas">0</span></div>
-          <div class="dl-items" id="poolDuplas" style="max-height:220px"></div>
+          <div class="dl-items" id="poolDuplas" style="max-height:200px"></div>
         </div>
         <div class="drag-list">
           <div class="dlhead">Motoristas disponíveis <span class="cnt" id="cntMotos">0</span></div>
-          <div class="dl-items" id="poolMotos" style="max-height:220px"></div>
+          <div class="dl-items" id="poolMotos" style="max-height:200px"></div>
+        </div>
+        <div class="drag-list">
+          <div class="dlhead">Carretas <span class="cnt" id="cntCarretas">0</span></div>
+          <div class="dl-items" id="poolCarretas" style="max-height:200px"></div>
+          <div style="padding:8px 12px;border-top:1px solid var(--b1)">
+            <button class="btn r" onclick="G.criarCarreta()" style="width:100%;justify-content:center;font-size:10px">+ Nova Carreta</button>
+          </div>
         </div>
       </div>
-
-      <!-- Hint -->
       <div class="aloc-hint">
-        <span><svg width="10" height="10" viewBox="0 0 10 10" fill="var(--muted)"><path d="M5 1l1.5 3H9L6.5 6l1 3L5 7.5 2.5 9l1-3L1 4h2.5z"/></svg> Arraste um item acima para uma doca abaixo</span>
-        <span><span class="dot dg" style="display:inline-block"></span> Ativa</span>
-        <span><span class="dot dr" style="display:inline-block"></span> Carreta</span>
-        <span style="color:var(--acc)">✕ dentro da doca remove o item de volta ao pool</span>
+        <span>↑ Arraste qualquer item acima para uma doca abaixo</span>
+        <span style="color:var(--acc)">✕ dentro da doca devolve ao pool</span>
       </div>
-
-      <!-- Docas -->
       <div class="docas-grid" id="docasGrid"></div>
     </div>
 
-    <!-- KPIs PRODUTIVIDADE -->
-    <div class="panel" id="prodPanel">
-      <div class="phead"><div class="ptitle"><span class="dot dg"></span>Produtividade em Tempo Real</div></div>
+    <!-- Produtividade -->
+    <div class="panel">
+      <div class="phead"><div class="ptitle"><span class="dot dg"></span>Produtividade do Turno — dados reais de operações finalizadas</div></div>
       <div class="prod-grid" id="prodGrid"></div>
     </div>
 
-    <!-- FILA DE ESPERA — scroll horizontal de cards draggáveis -->
+    <!-- Fila -->
     <div class="panel">
       <div class="phead">
         <div class="ptitle"><span class="dot db"></span>Fila de Espera</div>
@@ -382,7 +390,7 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
       <div class="fila-scroll" id="filaScroll"></div>
     </div>
 
-    <!-- GRÁFICO + LOG em grid 50/50 -->
+    <!-- Gráfico + Log -->
     <div class="bottom-grid">
       <div class="panel">
         <div class="phead"><div class="ptitle"><span class="dot dg"></span>Entradas por Hora</div></div>
@@ -393,10 +401,43 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
         <div class="log-wrap" id="logWrap"></div>
       </div>
     </div>
+  </div>
 
-  </div><!-- /tab-gestao -->
+  <!-- TAB CARRETAS -->
+  <div id="tab-carretas" class="mcontent" style="display:none">
+    <div class="kstrip">
+      <div class="kpi"><div class="kl">Carretas Hoje</div><div class="kv a" id="cTot">0</div></div>
+      <div class="kpi"><div class="kl">Em Doca Agora</div><div class="kv r" id="cAtivas">0</div></div>
+      <div class="kpi"><div class="kl">Finalizadas</div><div class="kv g" id="cFin">0</div></div>
+      <div class="kpi"><div class="kl">Tempo Médio</div><div class="kv" id="cAvgT" style="font-size:16px;margin-top:3px">—</div></div>
+      <div class="kpi"><div class="kl">Total Paletes</div><div class="kv b" id="cTotPal">0</div></div>
+      <div class="kpi"><div class="kl">Total Manga-paletes</div><div class="kv p" id="cTotMP">0</div></div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;gap:8px;padding:0 2px">
+      <button class="btn" onclick="CAR.exportar()">↓ Exportar Excel</button>
+    </div>
+    <div class="cart-grid" id="cartGrid">
+      <div style="grid-column:1/-1;padding:20px;text-align:center;font-size:11px;color:var(--muted)">Nenhuma carreta registrada. Crie uma na aba "Doca em Tempo Real".</div>
+    </div>
+  </div>
 
-  <!-- ── TAB DASHBOARD ── -->
+  <!-- TAB HISTÓRICO -->
+  <div id="tab-historico" class="mcontent" style="display:none">
+    <div class="panel">
+      <div class="phead">
+        <div class="ptitle"><span class="dot da"></span>Histórico por Data</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input type="month" id="histMes" style="background:var(--bg);border:1px solid var(--b1);border-radius:5px;padding:5px 9px;color:var(--tx);font-size:12px;outline:none" onchange="HIST.render()">
+          <button class="btn r" onclick="HIST.limpar()">⊘ Apagar Tudo</button>
+        </div>
+      </div>
+    </div>
+    <div class="hist-grid" id="histGrid">
+      <div style="grid-column:1/-1;padding:20px;text-align:center;font-size:11px;color:var(--muted)">Nenhum dia fechado ainda. Use "Fechar Dia" na aba Doca em Tempo Real.</div>
+    </div>
+  </div>
+
+  <!-- TAB DASHBOARD -->
   <div id="tab-dash" class="mcontent" style="display:none">
     <div class="panel">
       <div class="phead"><div class="ptitle"><span class="dot da"></span>Registrar Operação Manual</div></div>
@@ -422,12 +463,12 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
       <div class="kpi"><div class="kl">Nomes Únicos</div><div class="kv" id="dTeams">0</div></div>
       <div class="kpi"><div class="kl">Mais Rápido(a)</div><div class="kv g" id="dFast" style="font-size:13px;margin-top:3px">—</div></div>
       <div class="kpi"><div class="kl">Mais Lento(a)</div><div class="kv r" id="dSlow" style="font-size:13px;margin-top:3px">—</div></div>
-      <div class="kpi"><div class="kl">Média pac/h</div><div class="kv" id="dAvg">0</div></div>
-      <div class="kpi"><div class="kl">Tempo Médio</div><div class="kv" id="dAvgT" style="font-size:16px;margin-top:3px">—</div></div>
+      <div class="kpi"><div class="kl">Média pac/h</div><div class="kv" id="dAvg">0</div><div class="ks">baseado em ops concluídas</div></div>
+      <div class="kpi"><div class="kl">Tempo Médio/Op</div><div class="kv" id="dAvgT" style="font-size:16px;margin-top:3px">—</div></div>
     </div>
     <div class="dash-g3">
       <div class="panel"><div class="phead"><div class="ptitle"><span class="dot da"></span>Volume por Nome</div></div><div class="cw"><canvas id="cVol"></canvas></div></div>
-      <div class="panel"><div class="phead"><div class="ptitle"><span class="dot db"></span>Eficiência (pac/h)</div></div><div class="cw"><canvas id="cEff"></canvas></div></div>
+      <div class="panel"><div class="phead"><div class="ptitle"><span class="dot db"></span>Eficiência pac/h <span style="font-size:9px;color:var(--muted);font-weight:400;margin-left:4px">— linha vermelha = média</span></div></div><div class="cw"><canvas id="cEff"></canvas></div></div>
       <div class="panel"><div class="phead"><div class="ptitle"><span class="dot dg"></span>Caminhões</div></div><div class="cw"><canvas id="cTrk"></canvas></div></div>
     </div>
     <div class="dash-g2">
@@ -439,7 +480,7 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
       </div>
     </div>
     <div class="panel">
-      <div class="phead"><div class="ptitle"><span class="dot dm"></span>Detalhamento</div></div>
+      <div class="phead"><div class="ptitle"><span class="dot dm"></span>Detalhamento de Operações Concluídas</div></div>
       <div class="twrap">
         <table id="opsTable">
           <thead><tr><th>Nome / Dupla</th><th>Tipo</th><th>Início</th><th>Término</th><th>Pacotes</th><th>Duração (h)</th><th>Eficiência</th><th>Rating</th></tr></thead>
@@ -450,7 +491,7 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
   </div>
 </div>
 
-<!-- ════ PORTAL MOTORISTA ════ -->
+<!-- PORTAL MOTORISTA -->
 <div id="sc-moto" class="screen">
   <div class="mwrap">
     <div class="mcard">
@@ -507,135 +548,183 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
         </div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:14px;font-size:10px;color:var(--muted)">
-      Gestor? <a href="#" onclick="showLogin()" style="color:var(--acc)">Painel de controle</a>
-    </div>
+    <div style="text-align:center;margin-top:14px;font-size:10px;color:var(--muted)">Gestor? <a href="#" onclick="showLogin()" style="color:var(--acc)">Painel de controle</a></div>
   </div>
 </div>
 
-<!-- MODAL -->
+<!-- MODAL RESET -->
+<div class="modal-bg" id="modalReset">
+  <div class="modal">
+    <h3>Resetar o dia</h3>
+    <p>Isso vai limpar as docas, a fila e os contadores de hoje. Os dados serão perdidos (use "Fechar Dia" primeiro para salvar). Continuar?</p>
+    <div class="mbtns">
+      <button class="btn" onclick="closeModal('modalReset')">Cancelar</button>
+      <button class="btn r" onclick="G.confirmarReset()">Resetar</button>
+    </div>
+  </div>
+</div>
+<!-- MODAL CLEAR OPS -->
 <div class="modal-bg" id="modalOk">
   <div class="modal">
     <h3>Confirmar exclusão</h3>
-    <p>Todos os dados de operações serão apagados permanentemente. Esta ação não pode ser desfeita.</p>
+    <p>Todos os dados de operações do Dashboard serão apagados permanentemente.</p>
     <div class="mbtns">
-      <button class="btn" onclick="closeModal()">Cancelar</button>
+      <button class="btn" onclick="closeModal('modalOk')">Cancelar</button>
       <button class="btn r" onclick="D.confirmar()">Limpar tudo</button>
     </div>
   </div>
 </div>
 
 <script>
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 //  ESTADO
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 const S = {
-  docas: Array.from({length:13}, (_,i) => ({id:169+i, status:'livre', dupla:null, motorista:null, inicio:null})),
-  pool_duplas: [],   // duplas disponíveis para drag
-  pool_motos: [],    // motoristas disponíveis para drag (veio do portal ou adicionado pelo gestor em versões anteriores)
+  docas: Array.from({length:13}, (_,i) => ({id:169+i, status:'livre', dupla:null, motorista:null, carreta:null, inicio:null})),
+  pool_duplas: [],
+  pool_motos: [],
+  pool_carretas: [],  // carretas prontas para arrastar
+  carretas_all: [],   // todas as carretas (ativas + finalizadas)
   ops: [],
   filteredOps: [],
-  meta: 5000,
-  desc: 0,
-  historico: {},
+  meta: 5000, desc: 0,
+  historico: {}, // {hora: count}
+  historico_dias: {}, // {YYYY-MM-DD: {desc, caminhoes, duplas, carretas}}
   log: [],
   teamColors: {}, cidx: 0,
-  motorista: null,   // motorista logado no portal
+  motorista: null,
   empresas: ['Prálog','Imediato','Hawk','Ontime'],
 };
-const PAL = ['#e6a817','#58a6ff','#3fb950','#f85149','#bc8cff','#ffa657','#39d353','#ff7b72','#d2a8ff','#79c0ff','#56d364','#f0883e'];
 
-// ── persistência ──
-const KEYS = ['docas','pool_duplas','pool_motos','ops','historico','log','teamColors','empresas'];
+const PAL = ['#e6a817','#58a6ff','#3fb950','#f85149','#bc8cff','#ffa657','#39d353','#ff7b72','#d2a8ff','#79c0ff','#56d364','#f0883e'];
+const KEYS_ARR = ['docas','pool_duplas','pool_motos','pool_carretas','carretas_all','ops','historico','historico_dias','log','teamColors','empresas'];
+
 function sv(){
   try{
-    KEYS.forEach(k => localStorage.setItem('dop_'+k, JSON.stringify(S[k])));
-    localStorage.setItem('dop_meta', S.meta);
-    localStorage.setItem('dop_desc', S.desc);
-    localStorage.setItem('dop_cidx', S.cidx);
+    KEYS_ARR.forEach(k => localStorage.setItem('dop_'+k, JSON.stringify(S[k])));
+    ['meta','desc','cidx'].forEach(k => localStorage.setItem('dop_'+k, S[k]));
     localStorage.setItem('dop_motorista', JSON.stringify(S.motorista));
   }catch(e){}
 }
 function ld(){
   try{
-    KEYS.forEach(k => { const v = localStorage.getItem('dop_'+k); if(v) S[k] = JSON.parse(v); });
-    S.meta  = +localStorage.getItem('dop_meta')  || 5000;
-    S.desc  = +localStorage.getItem('dop_desc')  || 0;
-    S.cidx  = +localStorage.getItem('dop_cidx')  || 0;
-    const mo = localStorage.getItem('dop_motorista'); if(mo) S.motorista = JSON.parse(mo);
+    KEYS_ARR.forEach(k => { const v=localStorage.getItem('dop_'+k); if(v) S[k]=JSON.parse(v); });
+    ['meta','desc','cidx'].forEach(k => { const v=localStorage.getItem('dop_'+k); if(v!==null) S[k]=+v; });
+    const mo=localStorage.getItem('dop_motorista'); if(mo) S.motorista=JSON.parse(mo);
   }catch(e){}
-  // Garante docas 169-181
   if(!S.docas.length || S.docas[0]?.id < 169)
-    S.docas = Array.from({length:13}, (_,i) => ({id:169+i, status:'livre', dupla:null, motorista:null, inicio:null}));
+    S.docas = Array.from({length:13}, (_,i) => ({id:169+i, status:'livre', dupla:null, motorista:null, carreta:null, inicio:null}));
   if(!S.ops.length) S.ops = genOps();
 }
+
 function genOps(){
-  const n=["Carlos & Bruna","Lucas & Fernanda","Matheus & Gabriela","Rafael & Juliana","Vinicius & Patricia","Gustavo & Sandra"];
+  const names=["Carlos & Bruna","Lucas & Fernanda","Matheus & Gabriela","Rafael & Juliana","Vinicius & Patricia"];
   const td = new Date().toISOString().slice(0,10);
-  return n.map((nm,i) => {
+  return names.map((nm,i) => {
     const h=13+(i%5), dur=60+Math.floor(Math.random()*90);
-    const st = new Date(`${td}T${String(h).padStart(2,'0')}:${String((i*7)%60).padStart(2,'0')}`);
-    const en = new Date(st.getTime()+dur*60000);
+    const st=new Date(`${td}T${String(h).padStart(2,'0')}:${String((i*7)%60).padStart(2,'0')}`);
+    const en=new Date(st.getTime()+dur*60000);
     return {id:i+1, team:nm, tipo:'dupla', startTime:st.toISOString(), endTime:en.toISOString(), packages:1500+Math.floor(Math.random()*800)};
   });
 }
 
-// ── helpers ──
-function addLog(tipo, msg){ const h=new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}); S.log.unshift({tipo,msg,h}); if(S.log.length>80)S.log.length=80; }
+// ═══════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════
+function addLog(tipo,msg){ const h=new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}); S.log.unshift({tipo,msg,h}); if(S.log.length>100)S.log.length=100; }
 function clr(t){ if(!S.teamColors[t]){ S.teamColors[t]=PAL[S.cidx%PAL.length]; S.cidx++; } return S.teamColors[t]; }
 function ini(n){ if(!n)return'??'; const p=n.replace(/&/g,'e').split(/\s+e\s+/i).map(x=>x.trim()); if(p.length>=2&&p[0]&&p[1])return(p[0][0]+p[1][0]).toUpperCase(); const w=n.split(' '); if(w.length>=2)return(w[0][0]+w[w.length-1][0]).toUpperCase(); return n.slice(0,2).toUpperCase(); }
 function fdt(d){ return new Date(d).toLocaleString('pt-BR'); }
 function fmtMs(ms){ const h=Math.floor(ms/3600000),m=Math.floor((ms%3600000)/60000),s=Math.floor((ms%60000)/1000); return`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`; }
-function closeModal(){ document.getElementById('modalOk').classList.remove('open'); }
+function today(){ return new Date().toISOString().slice(0,10); }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
 function fillEmpSels(){ ['mfEmp'].forEach(id=>{ const el=document.getElementById(id); if(!el)return; const cv=el.value; el.innerHTML=S.empresas.map(e=>`<option>${e}</option>`).join(''); if(cv&&S.empresas.includes(cv))el.value=cv; }); }
 
-// ── nav ──
+// ═══════════════════════════════════════════════════
+//  NAV
+// ═══════════════════════════════════════════════════
 function showScreen(id){ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); document.getElementById(id).classList.add('active'); }
 function showLogin(){ showScreen('sc-login'); }
 function showMoto(){ showScreen('sc-moto'); M.render(); }
 function doLogin(){
-  const u=document.getElementById('lu').value.trim();
-  const p=document.getElementById('lp').value;
+  const u=document.getElementById('lu').value.trim(), p=document.getElementById('lp').value;
   const e=document.getElementById('lerr');
-  if(u==='gestor'&&p==='1234'){ e.style.display='none'; showScreen('sc-app'); G.render(); D.filter('today'); }
+  if(u==='gestor'&&p==='1234'){ e.style.display='none'; showScreen('sc-app'); G.render(); D.filter('today'); CAR.render(); HIST.init(); }
   else { e.style.display='block'; }
 }
 function doLogout(){ document.getElementById('lu').value=''; document.getElementById('lp').value=''; showScreen('sc-login'); }
-function setTab(id,btn){
+function setTab(id, btn){
   document.querySelectorAll('.ntab').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
-  document.getElementById('tab-gestao').style.display = id==='gestao'?'flex':'none';
-  document.getElementById('tab-dash').style.display   = id==='dash'?'flex':'none';
+  ['gestao','carretas','historico','dash'].forEach(t=>{ const el=document.getElementById('tab-'+t); if(el)el.style.display=t===id?'flex':'none'; });
   if(id==='dash') D.filter(document.getElementById('fPeriod').value);
+  if(id==='carretas') CAR.render();
+  if(id==='historico') HIST.render();
 }
 
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 //  CHARTS
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 let CH = {};
 const TT = {backgroundColor:'#1c2331',borderColor:'#30363d',borderWidth:1,titleColor:'#c9d1d9',bodyColor:'#8b949e',padding:10,cornerRadius:6};
 const SC = {x:{ticks:{color:'#8b949e',font:{size:10}},grid:{color:'rgba(255,255,255,0.04)'}},y:{ticks:{color:'#8b949e',font:{size:10}},grid:{color:'rgba(255,255,255,0.04)'},beginAtZero:true}};
+
 function initCharts(){
-  CH.hr = new Chart(document.getElementById('hrChart'), {type:'bar', data:{labels:Array.from({length:24},(_,i)=>`${i}h`), datasets:[{label:'Caminhões',data:Array(24).fill(0),backgroundColor:'#e6a81788',borderColor:'#e6a817',borderWidth:0,borderRadius:3}]}, options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false},tooltip:TT},scales:SC}});
-  const mkBar=(id,horiz)=>new Chart(document.getElementById(id),{type:'bar',data:{labels:[],datasets:[{data:[],backgroundColor:[],borderRadius:3,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:true,indexAxis:horiz?'y':'x',plugins:{legend:{display:false},tooltip:TT},scales:SC}});
-  CH.vol=mkBar('cVol',true); CH.eff=mkBar('cEff',true); CH.trk=mkBar('cTrk',false);
-  CH.dist = new Chart(document.getElementById('cDist'),{type:'doughnut',data:{labels:[],datasets:[{data:[],backgroundColor:[],borderWidth:2,borderColor:'#161b22',hoverBorderColor:'#1c2331'}]},options:{responsive:true,cutout:'65%',plugins:{legend:{position:'right',labels:{color:'#8b949e',font:{size:10},boxWidth:10,padding:8}},tooltip:TT}}});
-  CH.line = new Chart(document.getElementById('cLine'),{type:'line',data:{labels:[],datasets:[]},options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false},tooltip:TT},scales:SC,elements:{line:{tension:.4,borderWidth:2},point:{radius:3,hoverRadius:5}}}});
+  CH.hr = new Chart(document.getElementById('hrChart'),{
+    type:'bar',
+    data:{labels:Array.from({length:24},(_,i)=>`${i}h`),datasets:[{label:'Entradas',data:Array(24).fill(0),backgroundColor:ctx=>{const v=ctx.raw||0,mx=15;return`rgba(230,168,23,${Math.max(0.2,Math.min(1,v/mx))})`;},borderColor:'#e6a817',borderWidth:0,borderRadius:3}]},
+    options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:ctx=>`${ctx.raw} caminhão(s)`}}},scales:SC}
+  });
+
+  // Volume — barra horizontal com gradiente de cor por valor
+  CH.vol = new Chart(document.getElementById('cVol'),{
+    type:'bar',
+    data:{labels:[],datasets:[{data:[],backgroundColor:[],borderRadius:3,borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:true,indexAxis:'y',plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:ctx=>`${ctx.raw.toLocaleString('pt-BR')} pacotes`}}},scales:{...SC,x:{...SC.x,ticks:{...SC.x.ticks,callback:v=>v.toLocaleString('pt-BR')}}}}
+  });
+
+  // Eficiência — barra horizontal + linha de média
+  CH.eff = new Chart(document.getElementById('cEff'),{
+    type:'bar',
+    data:{labels:[],datasets:[
+      {label:'Eficiência',data:[],backgroundColor:[],borderRadius:3,borderWidth:0,order:2},
+      {label:'Média',data:[],type:'line',borderColor:'rgba(248,81,73,0.7)',borderWidth:1.5,borderDash:[4,3],pointRadius:0,fill:false,order:1}
+    ]},
+    options:{responsive:true,maintainAspectRatio:true,indexAxis:'y',
+      plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:ctx=>ctx.datasetIndex===0?`${ctx.raw} pac/h`:`Média: ${ctx.raw} pac/h`}}},
+      scales:{...SC,x:{...SC.x,ticks:{...SC.x.ticks,callback:v=>`${v}p/h`}}}
+    }
+  });
+
+  CH.trk = new Chart(document.getElementById('cTrk'),{
+    type:'bar',
+    data:{labels:[],datasets:[{data:[],backgroundColor:[],borderRadius:3,borderWidth:0}]},
+    options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:ctx=>`${ctx.raw} caminhão(s)`}}},scales:SC}
+  });
+
+  CH.dist = new Chart(document.getElementById('cDist'),{
+    type:'doughnut',
+    data:{labels:[],datasets:[{data:[],backgroundColor:[],borderWidth:2,borderColor:'#161b22'}]},
+    options:{responsive:true,cutout:'65%',plugins:{legend:{position:'right',labels:{color:'#8b949e',font:{size:10},boxWidth:10,padding:8}},tooltip:{...TT,callbacks:{label:ctx=>`${ctx.label}: ${ctx.raw.toLocaleString('pt-BR')} pac`}}}}
+  });
+
+  CH.line = new Chart(document.getElementById('cLine'),{
+    type:'line',
+    data:{labels:[],datasets:[]},
+    options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false},tooltip:TT},scales:SC,elements:{line:{tension:.4,borderWidth:2},point:{radius:3,hoverRadius:5}}}
+  });
 }
 
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 //  G — GESTÃO
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 const G = {
-  toggleForm(){
-    const f=document.getElementById('formDupla');
-    f.style.display = f.style.display==='none'?'block':'none';
-  },
+  toggleForm(){ const f=document.getElementById('formDupla'); f.style.display=f.style.display==='none'?'block':'none'; },
 
   addDupla(){
     const nomes=document.getElementById('dNomes').value.trim();
     const pkgs=parseInt(document.getElementById('dPkgs').value)||0;
-    if(!nomes){ alert('Informe os nomes da dupla.'); return; }
-    const c = clr(nomes);
+    if(!nomes){ alert('Informe os nomes.'); return; }
+    const c=clr(nomes);
     S.pool_duplas.push({id:Date.now(), nomes, pkgs, color:c, tipo:'dupla'});
     document.getElementById('dNomes').value=''; document.getElementById('dPkgs').value='';
     document.getElementById('formDupla').style.display='none';
@@ -643,86 +732,113 @@ const G = {
     sv(); this.render();
   },
 
-  setMeta(){ const v=parseInt(document.getElementById('metaInput').value); if(v>0){ S.meta=v; sv(); this.render(); } },
-
-  addCarreta(){
-    const d = S.docas.find(d=>d.status==='livre');
-    if(!d){ alert('Nenhuma doca livre.'); return; }
-    d.status='carreta'; d.inicio=new Date().toISOString();
-    addLog('sys', `Carreta → Doca ${d.id}`);
+  criarCarreta(){
+    const id = Date.now();
+    const label = `Carreta ${S.carretas_all.length+1}`;
+    const c = {id, label, status:'pool', docaId:null, inicio:null, fim:null, paletes:0, mangapaletes:0};
+    S.carretas_all.push(c);
+    S.pool_carretas.push({id, label, tipo:'carreta'});
+    addLog('reg', `${label} criada.`);
     sv(); this.render();
   },
 
-  // Aloca um item (dupla ou motorista) em uma doca via drag-drop
+  setMeta(){ const v=parseInt(document.getElementById('metaInput').value); if(v>0){ S.meta=v; sv(); this.render(); } },
+
+  fecharDia(){
+    const d = today();
+    const caminhoes = S.ops.filter(o=>new Date(o.startTime).toISOString().slice(0,10)===d).length;
+    const carretas = S.carretas_all.filter(c=>c.status==='done'&&c.fim&&c.fim.startsWith(d)).length;
+    const duplas = [...new Set(S.ops.filter(o=>o.tipo==='dupla'&&o.startTime.startsWith(d)).map(o=>o.team))].length;
+    S.historico_dias[d] = { desc: S.desc, caminhoes, duplas, carretas, meta: S.meta, date: d };
+    addLog('sys', `Dia ${d} fechado e salvo no histórico.`);
+    sv(); HIST.render();
+    alert(`Dia ${d} salvo no histórico com sucesso!`);
+  },
+
+  resetarDia(){ document.getElementById('modalReset').classList.add('open'); },
+
+  confirmarReset(){
+    S.docas = Array.from({length:13}, (_,i) => ({id:169+i, status:'livre', dupla:null, motorista:null, carreta:null, inicio:null}));
+    S.pool_duplas = []; S.pool_motos = []; S.pool_carretas = [];
+    S.carretas_all = S.carretas_all.filter(c=>c.status==='done'); // mantém finalizadas
+    S.desc = 0; S.historico = {}; S.log = [];
+    closeModal('modalReset');
+    addLog('sys', 'Dia resetado pelo gestor.');
+    sv(); this.render();
+  },
+
   alocar(itemId, itemTipo, docaId){
     const doca = S.docas.find(d=>d.id===docaId);
-    if(!doca || doca.status==='carreta') return;
+    if(!doca) return;
 
     if(itemTipo==='dupla'){
+      // Não pode soltar dupla em doca que já tem carreta como status único
+      if(doca.status==='carreta'&&!doca.dupla&&!doca.motorista){ alert('Esta doca está com carreta. Finalize-a primeiro.'); return; }
       if(doca.dupla){ alert('Doca já tem uma dupla.'); return; }
-      const idx = S.pool_duplas.findIndex(x=>x.id===itemId);
-      if(idx<0) return;
-      const dup = S.pool_duplas.splice(idx,1)[0];
-      doca.dupla = dup;
-      if(!doca.inicio) doca.inicio = new Date().toISOString();
-      doca.status = doca.motorista ? 'both' : 'dup';
+      const idx=S.pool_duplas.findIndex(x=>x.id===itemId); if(idx<0) return;
+      const dup=S.pool_duplas.splice(idx,1)[0];
+      doca.dupla=dup; if(!doca.inicio) doca.inicio=new Date().toISOString();
+      doca.status=doca.motorista?'both':doca.carreta?'both':'dup';
       addLog('call', `Dupla "${dup.nomes}" → Doca ${docaId}`);
-    } else {
+
+    } else if(itemTipo==='motorista'){
+      if(doca.status==='carreta'&&!doca.dupla&&!doca.motorista){ alert('Esta doca está com carreta. Finalize-a primeiro.'); return; }
       if(doca.motorista){ alert('Doca já tem um motorista.'); return; }
-      // Pode vir do pool_motos OU diretamente da fila (fila-card)
-      let mot = null;
-      const idx = S.pool_motos.findIndex(x=>x.id===itemId);
-      if(idx>=0){ mot = S.pool_motos.splice(idx,1)[0]; }
-      else {
-        // Reconstruir objeto básico do estado do motorista logado (portal)
-        if(S.motorista && S.motorista.id===itemId){
-          mot = {id:S.motorista.id, nome:S.motorista.nome, empresa:S.motorista.empresa, pacotes:S.motorista.pacotes, color:S.motorista.color||clr(S.motorista.nome), tipo:'motorista'};
-        }
+      let mot=null;
+      const idx=S.pool_motos.findIndex(x=>x.id===itemId);
+      if(idx>=0){ mot=S.pool_motos.splice(idx,1)[0]; }
+      else if(S.motorista&&S.motorista.id===itemId){
+        mot={id:S.motorista.id, nome:S.motorista.nome, empresa:S.motorista.empresa, pacotes:S.motorista.pacotes, color:S.motorista.color||clr(S.motorista.nome), tipo:'motorista'};
       }
       if(!mot) return;
-      doca.motorista = mot;
-      if(!doca.inicio) doca.inicio = new Date().toISOString();
-      doca.status = doca.dupla ? 'both' : 'mot';
+      doca.motorista=mot; if(!doca.inicio) doca.inicio=new Date().toISOString();
+      doca.status=doca.dupla||doca.carreta?'both':'mot';
       addLog('call', `${mot.nome} → Doca ${docaId}`);
-      // Sync portal
-      if(S.motorista && S.motorista.id===mot.id){
-        S.motorista.status='chamado'; S.motorista.docaId=docaId; M.render();
-      }
+      if(S.motorista&&S.motorista.id===mot.id){ S.motorista.status='chamado'; S.motorista.docaId=docaId; M.render(); }
+
+    } else if(itemTipo==='carreta'){
+      if(doca.carreta){ alert('Doca já tem uma carreta alocada.'); return; }
+      if(doca.dupla||doca.motorista){ alert('Remova a dupla/motorista antes de alocar uma carreta exclusiva, ou finalize a doca.'); return; }
+      const idx=S.pool_carretas.findIndex(x=>x.id===itemId); if(idx<0) return;
+      const cart=S.pool_carretas.splice(idx,1)[0];
+      doca.carreta=cart; if(!doca.inicio) doca.inicio=new Date().toISOString();
+      doca.status='carreta';
+      const ca=S.carretas_all.find(c=>c.id===cart.id);
+      if(ca){ ca.status='ativa'; ca.docaId=docaId; ca.inicio=doca.inicio; }
+      addLog('call', `${cart.label} → Doca ${docaId}`);
     }
     sv(); this.render();
   },
 
   removerDupla(docaId){
-    const d = S.docas.find(x=>x.id===docaId); if(!d||!d.dupla) return;
+    const d=S.docas.find(x=>x.id===docaId); if(!d||!d.dupla) return;
     S.pool_duplas.push(d.dupla); d.dupla=null;
-    d.status = d.motorista ? 'mot' : 'livre';
+    d.status=d.motorista?'mot':d.carreta?'carreta':'livre';
     if(d.status==='livre') d.inicio=null;
     addLog('sys', `Dupla removida da Doca ${docaId}`);
     sv(); this.render();
   },
 
   removerMoto(docaId){
-    const d = S.docas.find(x=>x.id===docaId); if(!d||!d.motorista) return;
+    const d=S.docas.find(x=>x.id===docaId); if(!d||!d.motorista) return;
     S.pool_motos.push(d.motorista); d.motorista=null;
-    d.status = d.dupla ? 'dup' : 'livre';
+    d.status=d.dupla?'dup':d.carreta?'carreta':'livre';
     if(d.status==='livre') d.inicio=null;
-    if(S.motorista && S.motorista.docaId===docaId){ S.motorista.status='fila'; S.motorista.docaId=null; M.render(); }
+    if(S.motorista&&S.motorista.docaId===docaId){ S.motorista.status='fila'; S.motorista.docaId=null; M.render(); }
     addLog('sys', `Motorista removido da Doca ${docaId}`);
     sv(); this.render();
   },
 
   finalizarDoca(id){
-    const d = S.docas.find(x=>x.id===id); if(!d) return;
-    const ini = d.inicio || new Date().toISOString();
-    const fim = new Date().toISOString();
-    const hr = new Date(ini).getHours();
-    S.historico[hr] = (S.historico[hr]||0)+1;
+    const d=S.docas.find(x=>x.id===id); if(!d) return;
+    const ini=d.inicio||new Date().toISOString(), fim=new Date().toISOString();
+    const hr=new Date(ini).getHours();
+    S.historico[hr]=(S.historico[hr]||0)+1;
 
     if(d.dupla){
       const p=d.dupla.pkgs||0;
       S.ops.push({id:Date.now()+1, team:d.dupla.nomes, tipo:'dupla', startTime:ini, endTime:fim, packages:p});
-      S.desc+=p;
-      d.dupla.docaId=null; S.pool_duplas.push(d.dupla);
+      S.desc+=p; S.pool_duplas.push(d.dupla);
       addLog('done', `Dupla "${d.dupla.nomes}" — Doca ${id} — +${p.toLocaleString()} pac.`);
     }
     if(d.motorista){
@@ -730,134 +846,117 @@ const G = {
       S.ops.push({id:Date.now()+2, team:d.motorista.nome, tipo:'motorista', startTime:ini, endTime:fim, packages:p});
       S.desc+=p;
       addLog('done', `${d.motorista.nome} — Doca ${id} — +${p.toLocaleString()} pac.`);
-      if(S.motorista && S.motorista.id===d.motorista.id){ S.motorista.status='fim'; M.render(); }
+      if(S.motorista&&S.motorista.id===d.motorista.id){ S.motorista.status='fim'; M.render(); }
     }
-    if(d.status==='carreta') addLog('done', `Carreta finalizada — Doca ${id}.`);
+    if(d.carreta){
+      const ca=S.carretas_all.find(c=>c.id===d.carreta.id);
+      if(ca){ ca.status='done'; ca.fim=fim; ca.docaId=id; }
+      S.pool_carretas.push(d.carreta);
+      addLog('done', `${d.carreta.label} finalizada — Doca ${id}.`);
+    }
+    if(d.status==='carreta'&&!d.carreta) addLog('done', `Doca ${id} liberada.`);
 
-    d.status='livre'; d.dupla=null; d.motorista=null; d.inicio=null;
+    d.status='livre'; d.dupla=null; d.motorista=null; d.carreta=null; d.inicio=null;
     sv(); this.render(); D.filter(document.getElementById('fPeriod').value);
   },
 
   render(){
-    // ── KPIs topo ──
-    const ativos = S.docas.filter(d=>d.status!=='livre');
-    const pct = Math.min(100, Math.round(S.desc/S.meta*100));
-    document.getElementById('kDesc').textContent   = S.desc.toLocaleString('pt-BR');
-    document.getElementById('kAtivas').textContent = ativos.length;
-    document.getElementById('kDuplas').textContent = S.docas.filter(d=>d.dupla).length;
-    document.getElementById('kMotos').textContent  = S.docas.filter(d=>d.motorista).length;
-    // Fila = motoristas no pool_motos que ainda não foram alocados
-    document.getElementById('kFila').textContent   = S.pool_motos.length;
-    document.getElementById('kPct').textContent    = pct+'%';
-    document.getElementById('kSub').textContent    = `${S.desc.toLocaleString()} / ${S.meta.toLocaleString()}`;
-    document.getElementById('kBar').style.width    = pct+'%';
-    document.getElementById('metaInput').value     = S.meta;
+    const ativos=S.docas.filter(d=>d.status!=='livre');
+    const pct=Math.min(100,Math.round(S.desc/S.meta*100));
+    document.getElementById('kDesc').textContent=S.desc.toLocaleString('pt-BR');
+    document.getElementById('kAtivas').textContent=ativos.length;
+    document.getElementById('kDuplas').textContent=S.docas.filter(d=>d.dupla).length;
+    document.getElementById('kMotos').textContent=S.docas.filter(d=>d.motorista).length;
+    document.getElementById('kFila').textContent=S.pool_motos.length;
+    document.getElementById('kPct').textContent=pct+'%';
+    document.getElementById('kSub').textContent=`${S.desc.toLocaleString()} / ${S.meta.toLocaleString()}`;
+    document.getElementById('kBar').style.width=pct+'%';
+    document.getElementById('metaInput').value=S.meta;
+    const pill=document.getElementById('tpill');
+    if(ativos.length){pill.textContent='● OPERAÇÃO ATIVA';pill.className='tpill on';}
+    else{pill.textContent='● INATIVO';pill.className='tpill off';}
 
-    const pill = document.getElementById('tpill');
-    if(ativos.length){ pill.textContent='● OPERAÇÃO ATIVA'; pill.className='tpill on'; }
-    else { pill.textContent='● INATIVO'; pill.className='tpill off'; }
+    // Pool duplas
+    document.getElementById('cntDuplas').textContent=S.pool_duplas.length;
+    document.getElementById('poolDuplas').innerHTML=S.pool_duplas.length
+      ?S.pool_duplas.map(d=>`<div class="di" draggable="true" data-id="${d.id}" data-tipo="dupla"><div class="di-av" style="background:${d.color}">${ini(d.nomes)}</div><div class="di-info"><div class="di-name">${d.nomes}</div><div class="di-sub">${(d.pkgs||0).toLocaleString()} pac.</div></div><span class="di-badge bdup">Dupla</span><span class="di-handle">⠿</span></div>`).join('')
+      :'<div class="dl-empty">Nenhuma dupla<br>disponível</div>';
 
-    // ── Pool duplas ──
-    document.getElementById('cntDuplas').textContent = S.pool_duplas.length;
-    document.getElementById('poolDuplas').innerHTML = S.pool_duplas.length
-      ? S.pool_duplas.map(d=>`
-        <div class="di" draggable="true" data-id="${d.id}" data-tipo="dupla">
-          <div class="di-av" style="background:${d.color}">${ini(d.nomes)}</div>
-          <div class="di-info">
-            <div class="di-name">${d.nomes}</div>
-            <div class="di-sub">${(d.pkgs||0).toLocaleString()} pacotes</div>
-          </div>
-          <span class="di-badge bdup">Dupla</span>
-          <span class="di-handle">⠿</span>
-        </div>`).join('')
-      : '<div class="dl-empty">Nenhuma dupla<br>disponível no momento</div>';
+    // Pool motos
+    document.getElementById('cntMotos').textContent=S.pool_motos.length;
+    document.getElementById('poolMotos').innerHTML=S.pool_motos.length
+      ?S.pool_motos.map(m=>`<div class="di" draggable="true" data-id="${m.id}" data-tipo="motorista"><div class="di-av" style="background:${m.color||'#58a6ff'}">${ini(m.nome)}</div><div class="di-info"><div class="di-name">${m.nome}</div><div class="di-sub">${m.empresa} · ${(m.pacotes||0).toLocaleString()} pac.</div></div><span class="di-badge bmot">Moto</span><span class="di-handle">⠿</span></div>`).join('')
+      :'<div class="dl-empty">Nenhum motorista<br>disponível</div>';
 
-    // ── Pool motoristas ──
-    document.getElementById('cntMotos').textContent = S.pool_motos.length;
-    document.getElementById('poolMotos').innerHTML = S.pool_motos.length
-      ? S.pool_motos.map(m=>`
-        <div class="di" draggable="true" data-id="${m.id}" data-tipo="motorista">
-          <div class="di-av" style="background:${m.color||'#58a6ff'}">${ini(m.nome)}</div>
-          <div class="di-info">
-            <div class="di-name">${m.nome}</div>
-            <div class="di-sub">${m.empresa} · ${(m.pacotes||0).toLocaleString()} pac.</div>
-          </div>
-          <span class="di-badge bmot">Moto</span>
-          <span class="di-handle">⠿</span>
-        </div>`).join('')
-      : '<div class="dl-empty">Nenhum motorista<br>disponível no momento</div>';
+    // Pool carretas
+    document.getElementById('cntCarretas').textContent=S.pool_carretas.length;
+    document.getElementById('poolCarretas').innerHTML=S.pool_carretas.length
+      ?S.pool_carretas.map(c=>`<div class="di" draggable="true" data-id="${c.id}" data-tipo="carreta"><div class="di-av" style="background:#f85149;font-size:8px">🚛</div><div class="di-info"><div class="di-name">${c.label}</div><div class="di-sub">Pronta para alocar</div></div><span class="di-badge bcart">Carreta</span><span class="di-handle">⠿</span></div>`).join('')
+      :'<div class="dl-empty">Crie carretas<br>abaixo</div>';
 
-    // ── Docas ──
-    const gr = document.getElementById('docasGrid');
-    gr.innerHTML = '';
-    S.docas.forEach(d => {
-      const el = document.createElement('div');
-      const sc = {livre:'',dup:'s-dup',mot:'s-mot',both:'s-both',carreta:'s-cart'}[d.status]||'';
-      el.className = `doca ${sc}`;
-      el.dataset.docaId = d.id;
-      const canDrop = d.status!=='carreta' && (!d.dupla||!d.motorista);
+    // Docas
+    const gr=document.getElementById('docasGrid');
+    gr.innerHTML='';
+    S.docas.forEach(d=>{
+      const el=document.createElement('div');
+      let sc='';
+      if(d.status==='carreta')sc='s-cart';
+      else if(d.status==='both')sc='s-both';
+      else if(d.status==='dup')sc='s-dup';
+      else if(d.status==='mot')sc='s-mot';
+      el.className=`doca ${sc}`;
+      el.dataset.docaId=d.id;
+      const canDrop = d.status==='livre' || (d.status!=='carreta' && (!d.dupla||!d.motorista));
       if(canDrop) el.dataset.droppable='true';
-      const num = `<div class="doca-num">DOCA ${d.id}</div>`;
+      const num=`<div class="doca-num">DOCA ${d.id}</div>`;
 
       if(d.status==='livre'){
         el.innerHTML=`${num}<div class="doca-badge db-livre">Livre</div><div class="doca-drop-hint">↓ arraste aqui</div>`;
-      } else if(d.status==='carreta'){
-        const t=fmtMs(Date.now()-new Date(d.inicio).getTime());
-        el.innerHTML=`${num}<div class="doca-badge db-cart">Carreta</div><div class="doca-timer">${t}</div><div class="doca-actions"><button class="btn r" onclick="G.finalizarDoca(${d.id})">✓ Finalizar</button></div>`;
       } else {
-        const ms = Date.now()-new Date(d.inicio).getTime();
-        const hd = ms/3600000;
-        const pkgs = (d.dupla?.pkgs||0)+(d.motorista?.pacotes||0);
-        const eff = hd>0?(pkgs/hd).toFixed(0):'—';
-        const badge = d.status==='both'?'db-both':d.status==='dup'?'db-dup':'db-mot';
-        const label = d.status==='both'?'Dupla+Moto':d.status==='dup'?'Dupla':'Motorista';
+        const ms=d.inicio?Date.now()-new Date(d.inicio).getTime():0;
+        const hd=ms/3600000;
         let slots='';
-        if(d.dupla)     slots+=`<div class="slot slot-g"><span class="slot-dot" style="background:${d.dupla.color}"></span><span class="slot-name">${d.dupla.nomes}</span><button class="slot-rm" onclick="G.removerDupla(${d.id})" title="Remover dupla">✕</button></div>`;
-        if(d.motorista) slots+=`<div class="slot slot-b"><span class="slot-dot" style="background:${d.motorista.color||'#58a6ff'}"></span><span class="slot-name">${d.motorista.nome}</span><button class="slot-rm" onclick="G.removerMoto(${d.id})" title="Remover motorista">✕</button></div>`;
-        const extraDrop = canDrop ? `<div class="doca-drop-hint">+ ${!d.dupla?'dupla':'moto'}</div>` : '';
-        el.innerHTML=`${num}<div class="doca-badge ${badge}">${label}</div><div class="doca-slots">${slots}</div><div class="doca-timer">${fmtMs(ms)}</div><div class="doca-eff">${eff} pac/h · ${pkgs.toLocaleString()} pac</div>${extraDrop}<div class="doca-actions"><button class="btn r" onclick="G.finalizarDoca(${d.id})">✓ Finalizar</button></div>`;
+        if(d.dupla)    slots+=`<div class="slot slot-g"><span class="slot-dot" style="background:${d.dupla.color}"></span><span class="slot-name">${d.dupla.nomes}</span><button class="slot-rm" onclick="G.removerDupla(${d.id})">✕</button></div>`;
+        if(d.motorista)slots+=`<div class="slot slot-b"><span class="slot-dot" style="background:${d.motorista.color||'#58a6ff'}"></span><span class="slot-name">${d.motorista.nome}</span><button class="slot-rm" onclick="G.removerMoto(${d.id})">✕</button></div>`;
+        if(d.carreta)  slots+=`<div class="slot slot-r"><span class="slot-dot" style="background:var(--red)"></span><span class="slot-name">${d.carreta.label}</span></div>`;
+        const badge=d.status==='both'?'db-both':d.status==='dup'?'db-dup':d.status==='mot'?'db-mot':'db-cart';
+        const label=d.status==='both'?'Ativo':d.status==='dup'?'Dupla':d.status==='mot'?'Motorista':'Carreta';
+        const extraDrop=canDrop?`<div class="doca-drop-hint">+ ${!d.dupla?'dupla ':''}${!d.motorista?'moto ':''}${!d.carreta?'carreta':''}</div>`:'';
+        // Produtividade simplificada: só mostra pacotes declarados e tempo
+        const pkgsTot=(d.dupla?.pkgs||0)+(d.motorista?.pacotes||0);
+        const effTxt=pkgsTot>0&&hd>0.016?`${Math.round(pkgsTot/hd)} pac/h est.`:'aguardando';
+        el.innerHTML=`${num}<div class="doca-badge ${badge}">${label}</div><div class="doca-slots">${slots}</div><div class="doca-timer">${fmtMs(ms)}</div>${pkgsTot>0?`<div class="doca-eff">${effTxt}</div>`:''}<div class="doca-drop-hint" style="font-size:8px">${extraDrop?extraDrop.replace(/<[^>]+>/g,''):''}</div><div class="doca-actions"><button class="btn r" onclick="G.finalizarDoca(${d.id})">✓ Finalizar</button></div>`;
       }
       gr.appendChild(el);
     });
 
-    // ── Setup drag-drop (items → docas) ──
+    // Drag-drop setup
     setTimeout(()=>{
       document.querySelectorAll('.di[draggable],.fila-card[draggable]').forEach(item=>{
-        item.addEventListener('dragstart', e=>{
-          e.dataTransfer.setData('did', item.dataset.id);
-          e.dataTransfer.setData('dtipo', item.dataset.tipo);
-          item.classList.add('dragging');
-        });
-        item.addEventListener('dragend', ()=>item.classList.remove('dragging'));
+        item.addEventListener('dragstart',e=>{ e.dataTransfer.setData('did',item.dataset.id); e.dataTransfer.setData('dtipo',item.dataset.tipo); item.classList.add('dragging'); });
+        item.addEventListener('dragend',()=>item.classList.remove('dragging'));
       });
       document.querySelectorAll('.doca[data-droppable]').forEach(doca=>{
-        doca.addEventListener('dragover', e=>{ e.preventDefault(); doca.classList.add('over'); });
-        doca.addEventListener('dragleave', ()=>doca.classList.remove('over'));
-        doca.addEventListener('drop', e=>{
-          e.preventDefault(); doca.classList.remove('over');
-          G.alocar(parseInt(e.dataTransfer.getData('did')), e.dataTransfer.getData('dtipo'), parseInt(doca.dataset.docaId));
-        });
+        doca.addEventListener('dragover',e=>{ e.preventDefault(); doca.classList.add('over'); });
+        doca.addEventListener('dragleave',()=>doca.classList.remove('over'));
+        doca.addEventListener('drop',e=>{ e.preventDefault(); doca.classList.remove('over'); G.alocar(parseInt(e.dataTransfer.getData('did')),e.dataTransfer.getData('dtipo'),parseInt(doca.dataset.docaId)); });
       });
     },0);
 
-    // ── Produtividade ──
+    // Produtividade — apenas ops concluídas do dia de hoje
     this.renderProd();
 
-    // ── Fila — cards horizontais draggáveis ──
-    const fs = document.getElementById('filaScroll');
-    // A fila é composta pelos motoristas em pool_motos
-    document.getElementById('filaTotal').textContent = S.pool_motos.length;
+    // Fila
+    const fs=document.getElementById('filaScroll');
+    document.getElementById('filaTotal').textContent=S.pool_motos.length;
     if(!S.pool_motos.length){
-      fs.innerHTML='<div class="fila-empty">Nenhum motorista na fila de espera.</div>';
+      fs.innerHTML='<div class="fila-empty">Nenhum motorista na fila.</div>';
     } else {
-      fs.innerHTML = S.pool_motos.map((m,i)=>`
+      fs.innerHTML=S.pool_motos.map((m,i)=>`
         <div class="fila-card" draggable="true" data-id="${m.id}" data-tipo="motorista">
           <div class="fc-top">
             <div class="fc-av" style="background:${m.color||'#58a6ff'}">${ini(m.nome)}</div>
-            <div style="flex:1;min-width:0">
-              <div class="fc-nome">${m.nome}</div>
-              <div class="fc-emp">${m.empresa}</div>
-            </div>
+            <div style="flex:1;min-width:0"><div class="fc-nome">${m.nome}</div><div class="fc-emp">${m.empresa}</div></div>
           </div>
           <div class="fc-pkgs">${(m.pacotes||0).toLocaleString()} pacotes</div>
           <div class="fc-pos"><span class="pos-num">${i+1}º</span> na fila</div>
@@ -865,72 +964,178 @@ const G = {
         </div>`).join('');
     }
 
-    // ── Log ──
-    const lc = document.getElementById('logWrap');
-    const lco = {sys:'#58a6ff',reg:'#3fb950',call:'#e6a817',done:'#bc8cff',err:'#f85149'};
-    lc.innerHTML = S.log.length
-      ? S.log.map(e=>`<div class="lentry"><div class="lt">${e.h}</div><div class="ld" style="background:${lco[e.tipo]||'#6e7681'}"></div><div class="lm">${e.msg}</div></div>`).join('')
-      : '<div style="font-size:11px;color:var(--muted);padding:4px 0">Aguardando eventos...</div>';
+    // Log
+    const lc=document.getElementById('logWrap');
+    const lco={sys:'#58a6ff',reg:'#3fb950',call:'#e6a817',done:'#bc8cff',err:'#f85149'};
+    lc.innerHTML=S.log.length?S.log.map(e=>`<div class="lentry"><div class="lt">${e.h}</div><div class="ld" style="background:${lco[e.tipo]||'#6e7681'}"></div><div class="lm">${e.msg}</div></div>`).join(''):'<div style="font-size:11px;color:var(--muted)">Aguardando eventos...</div>';
 
-    // ── Gráfico horários ──
-    CH.hr.data.datasets[0].data = Array.from({length:24}, (_,i)=>S.historico[i]||0);
+    CH.hr.data.datasets[0].data=Array.from({length:24},(_,i)=>S.historico[i]||0);
     CH.hr.update();
   },
 
   renderProd(){
-    const ativas = S.docas.filter(d=>d.status!=='livre'&&d.status!=='carreta');
-    const pg = document.getElementById('prodGrid');
-    if(!ativas.length){ pg.innerHTML='<div class="prod-empty">Nenhuma doca ativa no momento.</div>'; return; }
-    const effs = ativas.map(d=>{ const ms=Date.now()-new Date(d.inicio).getTime(); const h=ms/3600000; const p=(d.dupla?.pkgs||0)+(d.motorista?.pacotes||0); return h>0?p/h:0; });
-    const maxEff = Math.max(...effs,1);
-    const mediaEff = effs.reduce((a,b)=>a+b,0)/effs.length;
-    pg.innerHTML = ativas.map((d,i)=>{
-      const ms=Date.now()-new Date(d.inicio).getTime();
-      const hd=ms/3600000, min=Math.floor(ms/60000);
-      const pkgs=(d.dupla?.pkgs||0)+(d.motorista?.pacotes||0);
-      const eff=hd>0?pkgs/hd:0;
-      const pct=Math.min(100,(eff/maxEff)*100);
-      const bc=eff>=mediaEff*1.1?'var(--green)':eff>=mediaEff*0.8?'var(--acc)':'var(--red)';
-      const rtxt=eff>=mediaEff*1.1?'Acima da média':eff>=mediaEff*0.8?'Na média':'Abaixo da média';
-      const nome=d.dupla?d.dupla.nomes:(d.motorista?d.motorista.nome:'—');
-      const ac=d.dupla?d.dupla.color:(d.motorista?.color||'#58a6ff');
-      const sub2=d.dupla&&d.motorista?`<div class="pc-sub2">+ ${d.motorista.nome}</div>`:'';
+    // Produtividade baseada APENAS em operações concluídas de hoje
+    const todayStr=today();
+    const opsHoje=S.ops.filter(o=>o.startTime&&o.startTime.startsWith(todayStr));
+    const teams=[...new Set(opsHoje.map(o=>o.team))];
+    const pg=document.getElementById('prodGrid');
+
+    if(!teams.length){
+      pg.innerHTML='<div class="prod-empty">Os dados aparecerão ao finalizar a primeira doca do dia.</div>';
+      return;
+    }
+
+    const metrics=teams.map(t=>{
+      const ops=opsHoje.filter(o=>o.team===t);
+      const p=ops.reduce((a,o)=>a+o.packages,0);
+      // Eficiência REAL: soma dos minutos efetivos de cada operação concluída
+      const minTot=ops.reduce((a,o)=>a+(new Date(o.endTime)-new Date(o.startTime))/60000,0);
+      const hTot=minTot/60;
+      const eff=hTot>0?p/hTot:0;
+      const avgMin=ops.length?minTot/ops.length:0;
+      return {team:t, p, trucks:ops.length, hTot, eff, avgMin, ops};
+    }).sort((a,b)=>b.p-a.p);
+
+    // Linha de média para comparação
+    const mediaEff=metrics.reduce((a,m)=>a+m.eff,0)/metrics.length||0;
+
+    pg.innerHTML=metrics.map(m=>{
+      const c=clr(m.team);
+      const effStr=m.eff>0?Math.round(m.eff).toLocaleString('pt-BR'):'—';
+      const rating=m.eff>0?(m.eff>=mediaEff*1.15?'↑ Acima da média':m.eff>=mediaEff*0.85?'→ Na média':'↓ Abaixo da média'):'';
+      const ratingColor=m.eff>=mediaEff*1.15?'var(--green)':m.eff>=mediaEff*0.85?'var(--acc)':'var(--red)';
       return`<div class="pcard">
         <div class="pc-head">
-          <div class="pc-av" style="background:${ac}">${ini(nome)}</div>
-          <div style="flex:1;min-width:0"><div class="pc-name">${nome}</div>${sub2}</div>
-          <div class="pc-doca">D${d.id}</div>
+          <div class="pc-av" style="background:${c}">${ini(m.team)}</div>
+          <div class="pc-name" title="${m.team}">${m.team}</div>
+          <div class="pc-doca" style="color:var(--acc)">${m.trucks}×🚛</div>
         </div>
         <div class="pc-metrics">
-          <div class="pm"><div class="pm-v" style="color:var(--acc)">${eff>0?Math.round(eff):'—'}</div><div class="pm-l">pac/h</div></div>
-          <div class="pm"><div class="pm-v" style="color:var(--green)">${pkgs.toLocaleString()}</div><div class="pm-l">pacotes</div></div>
-          <div class="pm"><div class="pm-v" style="color:var(--blue)">${min}m</div><div class="pm-l">tempo</div></div>
+          <div class="pm">
+            <div class="pm-v" style="color:var(--green)">${m.p.toLocaleString('pt-BR')}</div>
+            <div class="pm-l">pacotes totais</div>
+          </div>
+          <div class="pm">
+            <div class="pm-v" style="color:var(--acc)">${effStr}</div>
+            <div class="pm-l">pac/h (real)</div>
+          </div>
+          <div class="pm">
+            <div class="pm-v" style="color:var(--blue)">${m.avgMin>0?Math.round(m.avgMin)+'min':'—'}</div>
+            <div class="pm-l">tempo médio/op</div>
+          </div>
         </div>
-        <div class="pc-bar-wrap">
-          <div class="pc-bar-hd"><span>Eficiência relativa</span><span>${pct.toFixed(0)}%</span></div>
-          <div class="pc-bar"><div class="pc-bar-fill" style="width:${pct}%;background:${bc}"></div></div>
-        </div>
-        <div class="pc-rating"><span class="pc-rdot" style="background:${bc}"></span>${rtxt}</div>
+        ${m.eff>0&&mediaEff>0?`<div style="font-size:9px;display:flex;align-items:center;gap:5px;color:${ratingColor};margin-top:2px">${rating} · média: ${Math.round(mediaEff).toLocaleString()} pac/h</div>`:'<div style="font-size:9px;color:var(--muted);margin-top:2px">Eficiência calculada após 1ª operação</div>'}
       </div>`;
     }).join('');
   }
 };
 
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
+//  CAR — CARRETAS
+// ═══════════════════════════════════════════════════
+const CAR = {
+  render(){
+    const all=S.carretas_all;
+    const ativas=all.filter(c=>c.status==='ativa');
+    const fin=all.filter(c=>c.status==='done');
+    document.getElementById('cTot').textContent=all.length;
+    document.getElementById('cAtivas').textContent=ativas.length;
+    document.getElementById('cFin').textContent=fin.length;
+    const totPal=all.reduce((a,c)=>a+(c.paletes||0),0);
+    const totMP=all.reduce((a,c)=>a+(c.mangapaletes||0),0);
+    document.getElementById('cTotPal').textContent=totPal.toLocaleString();
+    document.getElementById('cTotMP').textContent=totMP.toLocaleString();
+    const avgMs=fin.length?fin.reduce((a,c)=>a+(new Date(c.fim)-new Date(c.inicio)),0)/fin.length:0;
+    document.getElementById('cAvgT').textContent=avgMs?fmtMs(avgMs):'—';
+
+    const gr=document.getElementById('cartGrid');
+    if(!all.length){gr.innerHTML='<div style="grid-column:1/-1;padding:20px;text-align:center;font-size:11px;color:var(--muted)">Nenhuma carreta registrada. Crie uma na aba "Doca em Tempo Real".</div>';return;}
+    gr.innerHTML=all.map(c=>{
+      const isActive=c.status==='ativa';
+      const dur=c.inicio?(isActive?Date.now()-new Date(c.inicio).getTime():new Date(c.fim)-new Date(c.inicio)):0;
+      return`<div class="cart-card ${isActive?'active':''}">
+        <div class="cart-title">
+          <div class="cart-id">${c.label}</div>
+          <div class="cart-status ${isActive?'cs-active':'cs-done'}">${isActive?'● Em doca':'✓ Finalizada'}</div>
+        </div>
+        ${c.inicio?`<div class="cart-timer">${fmtMs(dur)}</div>`:'<div style="font-size:11px;color:var(--muted)">Aguardando alocação</div>'}
+        ${c.inicio?`<div class="cart-row"><span>Início</span><span>${fdt(c.inicio)}</span></div>`:''}
+        ${c.fim?`<div class="cart-row"><span>Fim</span><span>${fdt(c.fim)}</span></div>`:''}
+        ${c.docaId?`<div class="cart-row"><span>Doca</span><span>${c.docaId}</span></div>`:''}
+        <div class="cart-row">
+          <span>Paletes</span>
+          <input type="number" class="cart-inp" value="${c.paletes||0}" min="0" onchange="CAR.updField(${c.id},'paletes',this.value)">
+        </div>
+        <div class="cart-row">
+          <span>Manga-paletes</span>
+          <input type="number" class="cart-inp" value="${c.mangapaletes||0}" min="0" onchange="CAR.updField(${c.id},'mangapaletes',this.value)">
+        </div>
+      </div>`;
+    }).join('');
+  },
+
+  updField(id, field, val){
+    const c=S.carretas_all.find(x=>x.id===id);
+    if(c){ c[field]=parseInt(val)||0; sv(); this.render(); }
+  },
+
+  exportar(){
+    const data=S.carretas_all.map(c=>{
+      const dur=c.inicio&&c.fim?((new Date(c.fim)-new Date(c.inicio))/3600000).toFixed(2):'—';
+      return{'Carreta':c.label,'Status':c.status==='done'?'Finalizada':'Ativa','Doca':c.docaId||'—','Início':c.inicio?fdt(c.inicio):'—','Fim':c.fim?fdt(c.fim):'—','Duração (h)':dur,'Paletes':c.paletes||0,'Manga-paletes':c.mangapaletes||0};
+    });
+    const ws=XLSX.utils.json_to_sheet(data);const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Carretas');
+    XLSX.writeFile(wb,`carretas-${today()}.xlsx`);
+  }
+};
+
+// ═══════════════════════════════════════════════════
+//  HIST — HISTÓRICO
+// ═══════════════════════════════════════════════════
+const HIST = {
+  init(){
+    const el=document.getElementById('histMes');
+    el.value=today().slice(0,7);
+  },
+  render(){
+    const mes=document.getElementById('histMes')?.value||today().slice(0,7);
+    const dias=Object.values(S.historico_dias).filter(d=>d.date.startsWith(mes)).sort((a,b)=>b.date.localeCompare(a.date));
+    const gr=document.getElementById('histGrid');
+    if(!dias.length){
+      gr.innerHTML='<div style="grid-column:1/-1;padding:20px;text-align:center;font-size:11px;color:var(--muted)">Nenhum dia fechado neste mês.</div>';
+      return;
+    }
+    gr.innerHTML=dias.map(d=>`
+      <div class="hist-card">
+        <div class="hist-date">${new Date(d.date+'T12:00:00').toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'})}</div>
+        <div class="hist-row"><span class="hist-k">Pacotes descarregados</span><span class="hist-v">${(d.desc||0).toLocaleString('pt-BR')}</span></div>
+        <div class="hist-row"><span class="hist-k">Meta do dia</span><span class="hist-v">${(d.meta||0).toLocaleString('pt-BR')}</span></div>
+        <div class="hist-row"><span class="hist-k">Caminhões</span><span class="hist-v">${d.caminhoes||0}</span></div>
+        <div class="hist-row"><span class="hist-k">Duplas ativas</span><span class="hist-v">${d.duplas||0}</span></div>
+        <div class="hist-row"><span class="hist-k">Carretas</span><span class="hist-v">${d.carretas||0}</span></div>
+        <div class="hist-row"><span class="hist-k">Atingimento da meta</span><span class="hist-v" style="color:${d.desc>=d.meta?'var(--green)':'var(--red)'}">${d.meta?Math.round((d.desc/d.meta)*100):0}%</span></div>
+        <button class="btn r" onclick="HIST.remover('${d.date}')" style="margin-top:8px;font-size:10px;width:100%;justify-content:center">✕ Remover</button>
+      </div>`).join('');
+  },
+  remover(date){ delete S.historico_dias[date]; sv(); this.render(); },
+  limpar(){ if(confirm('Apagar todo o histórico?')){ S.historico_dias={}; sv(); this.render(); } }
+};
+
+// ═══════════════════════════════════════════════════
 //  D — DASHBOARD
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 const D = {
   filter(val){
-    const now=new Date(), td=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+    const now=new Date(),td=new Date(now.getFullYear(),now.getMonth(),now.getDate());
     let st,en;
     switch(val){
-      case'today':    st=td; en=new Date(td.getTime()+864e5); break;
-      case'yesterday':st=new Date(td.getTime()-864e5); en=td; break;
-      case'week':     st=new Date(td); st.setDate(st.getDate()-now.getDay()); en=new Date(now.getTime()+864e5); break;
-      case'month':    st=new Date(now.getFullYear(),now.getMonth(),1); en=new Date(now.getTime()+864e5); break;
-      default:        S.filteredOps=[...S.ops]; this.render(); return;
+      case'today':st=td;en=new Date(td.getTime()+864e5);break;
+      case'yesterday':st=new Date(td.getTime()-864e5);en=td;break;
+      case'week':st=new Date(td);st.setDate(st.getDate()-now.getDay());en=new Date(now.getTime()+864e5);break;
+      case'month':st=new Date(now.getFullYear(),now.getMonth(),1);en=new Date(now.getTime()+864e5);break;
+      default:S.filteredOps=[...S.ops];this.render();return;
     }
-    S.filteredOps = S.ops.filter(o=>{ const d=new Date(o.startTime); return d>=st&&d<en; });
+    S.filteredOps=S.ops.filter(o=>{ const d=new Date(o.startTime);return d>=st&&d<en; });
     this.render();
   },
   addOp(){
@@ -938,57 +1143,63 @@ const D = {
     const s=document.getElementById('opStart').value;
     const e=document.getElementById('opEnd').value;
     const p=parseInt(document.getElementById('opPkgs').value)||0;
-    if(!t||!s||!e||!p){ alert('Preencha todos os campos.'); return; }
-    if(new Date(e)<=new Date(s)){ alert('Término deve ser após o início.'); return; }
+    if(!t||!s||!e||!p){alert('Preencha todos os campos.');return;}
+    if(new Date(e)<=new Date(s)){alert('Término deve ser após o início.');return;}
     S.ops.push({id:Date.now(),team:t,tipo:'manual',startTime:new Date(s).toISOString(),endTime:new Date(e).toISOString(),packages:p});
-    clr(t); document.getElementById('opTeam').value=''; document.getElementById('opPkgs').value='';
-    sv(); this.filter(document.getElementById('fPeriod').value); this.fillDL();
+    clr(t);document.getElementById('opTeam').value='';document.getElementById('opPkgs').value='';
+    sv();this.filter(document.getElementById('fPeriod').value);this.fillDL();
   },
-  fillDL(){ document.getElementById('teamsDL').innerHTML=[...new Set(S.ops.map(o=>o.team))].map(t=>`<option value="${t}">`).join(''); },
+  fillDL(){ const dl=document.getElementById('teamsDL'); dl.innerHTML=[...new Set(S.ops.map(o=>o.team))].map(t=>`<option value="${t}">`).join(''); },
   metrics(){
-    const teams=[...new Set(S.filteredOps.map(o=>o.team))]; const m={};
+    const teams=[...new Set(S.filteredOps.map(o=>o.team))],m={};
     teams.forEach(t=>{
       const ops=S.filteredOps.filter(o=>o.team===t);
       const p=ops.reduce((a,o)=>a+o.packages,0);
+      // Eficiência real: soma das horas efetivamente trabalhadas (startTime→endTime)
       const h=ops.reduce((a,o)=>a+(new Date(o.endTime)-new Date(o.startTime))/36e5,0);
-      m[t]={p,trucks:ops.length,h,eff:h>0?p/h:0,avgH:ops.length?h/ops.length:0,tipo:ops[0]?.tipo||'manual'};
+      m[t]={p,trucks:ops.length,h,eff:h>0?p/h:0,avgH:ops.length?h/ops.length:0};
     });
     return m;
   },
   render(){
-    const m=this.metrics(); const teams=Object.keys(m); const cols=teams.map(t=>clr(t));
+    const m=this.metrics();const teams=Object.keys(m);const cols=teams.map(t=>clr(t));
     const tot=Object.values(m).reduce((a,x)=>a+x.p,0);
     const trk=Object.values(m).reduce((a,x)=>a+x.trucks,0);
     const avg=teams.length?Object.values(m).reduce((a,x)=>a+x.eff,0)/teams.length:0;
     const avgT=teams.length?Object.values(m).reduce((a,x)=>a+x.avgH,0)/teams.length:0;
-    document.getElementById('dTot').textContent   = tot.toLocaleString('pt-BR');
-    document.getElementById('dTrk').textContent   = trk;
-    document.getElementById('dTeams').textContent = teams.length;
-    document.getElementById('dAvg').textContent   = avg.toFixed(0);
-    document.getElementById('dAvgT').textContent  = avgT>0?`${(avgT*60).toFixed(0)}min`:'—';
+    document.getElementById('dTot').textContent=tot.toLocaleString('pt-BR');
+    document.getElementById('dTrk').textContent=trk;
+    document.getElementById('dTeams').textContent=teams.length;
+    document.getElementById('dAvg').textContent=avg.toFixed(0);
+    document.getElementById('dAvgT').textContent=avgT>0?`${(avgT*60).toFixed(0)}min`:'—';
     const srt=Object.entries(m).sort((a,b)=>b[1].eff-a[1].eff);
     if(srt.length>=2){
       document.getElementById('dFast').textContent=`▲ ${srt[0][0].split(' ')[0]} ${srt[0][1].eff.toFixed(0)}p/h`;
       document.getElementById('dSlow').textContent=`▼ ${srt[srt.length-1][0].split(' ')[0]} ${srt[srt.length-1][1].eff.toFixed(0)}p/h`;
-    } else { document.getElementById('dFast').textContent='—'; document.getElementById('dSlow').textContent='—'; }
+    } else { document.getElementById('dFast').textContent='—';document.getElementById('dSlow').textContent='—'; }
 
     const srtV=Object.entries(m).sort((a,b)=>b[1].p-a[1].p);
     const srtE=Object.entries(m).sort((a,b)=>b[1].eff-a[1].eff);
     const inits=teams.map(t=>ini(t));
-    function upd(ch,labels,data,bgs){ ch.data.labels=labels; ch.data.datasets[0].data=data; ch.data.datasets[0].backgroundColor=bgs; ch.update(); }
-    upd(CH.vol, srtV.map(([t])=>ini(t)), srtV.map(([,v])=>v.p),   srtV.map(([t])=>clr(t)+'cc'));
-    upd(CH.eff, srtE.map(([t])=>ini(t)), srtE.map(([,v])=>+v.eff.toFixed(1)), srtE.map(([t])=>clr(t)+'cc'));
-    upd(CH.trk, inits, teams.map(t=>m[t].trucks), cols.map(c=>c+'cc'));
-    CH.dist.data.labels=inits; CH.dist.data.datasets[0].data=teams.map(t=>m[t].p); CH.dist.data.datasets[0].backgroundColor=cols; CH.dist.update();
-
+    // Average efficiency for reference line
+    const avgEff=avg;
+    function upd(ch,labels,data,bgs){ ch.data.labels=labels;ch.data.datasets[0].data=data;ch.data.datasets[0].backgroundColor=bgs;ch.update(); }
+    upd(CH.vol,srtV.map(([t])=>ini(t)),srtV.map(([,v])=>v.p),srtV.map(([t])=>clr(t)+'cc'));
+    // Efficiency chart with average line
+    CH.eff.data.labels=srtE.map(([t])=>ini(t));
+    CH.eff.data.datasets[0].data=srtE.map(([,v])=>+v.eff.toFixed(1));
+    CH.eff.data.datasets[0].backgroundColor=srtE.map(([t])=>clr(t)+'cc');
+    CH.eff.data.datasets[1].data=srtE.map(()=>+avgEff.toFixed(1));
+    CH.eff.update();
+    upd(CH.trk,inits,teams.map(t=>m[t].trucks),cols.map(c=>c+'cc'));
+    CH.dist.data.labels=inits;CH.dist.data.datasets[0].data=teams.map(t=>m[t].p);CH.dist.data.datasets[0].backgroundColor=cols;CH.dist.update();
     const hrs=Array.from({length:11},(_,i)=>`${String(i+13).padStart(2,'0')}:00`);
     CH.line.data.labels=hrs;
-    CH.line.data.datasets=teams.map(t=>({label:ini(t),data:hrs.map((_,idx)=>{ const h=idx+13; return S.filteredOps.filter(o=>o.team===t&&new Date(o.endTime).getHours()<h+1).reduce((a,o)=>a+o.packages,0); }),borderColor:clr(t),backgroundColor:clr(t)+'22',fill:false,pointBackgroundColor:clr(t)}));
+    CH.line.data.datasets=teams.map(t=>({label:ini(t),data:hrs.map((_,idx)=>{const h=idx+13;return S.filteredOps.filter(o=>o.team===t&&new Date(o.endTime).getHours()<h+1).reduce((a,o)=>a+o.packages,0);}),borderColor:clr(t),backgroundColor:clr(t)+'22',fill:false,pointBackgroundColor:clr(t)}));
     CH.line.update();
     document.getElementById('lineLegend').innerHTML=teams.map(t=>`<div class="ch-li"><div class="ch-sw" style="background:${clr(t)}"></div><span>${ini(t)}: ${t}</span></div>`).join('');
-
     const tb=document.querySelector('#opsTable tbody');
-    if(!S.filteredOps.length){ tb.innerHTML=`<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:16px">Nenhuma operação encontrada.</td></tr>`; return; }
+    if(!S.filteredOps.length){tb.innerHTML=`<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:16px">Nenhuma operação encontrada.</td></tr>`;this.fillDL();return;}
     const allEff=Object.values(m).map(x=>x.eff).sort((a,b)=>b-a);
     const q1=allEff[0]||1, q3=allEff[Math.floor(allEff.length*2/3)]||0;
     tb.innerHTML=[...S.filteredOps].sort((a,b)=>new Date(b.startTime)-new Date(a.startTime)).map(op=>{
@@ -1003,16 +1214,16 @@ const D = {
   },
   exportar(){
     const data=S.filteredOps.map(op=>{ const dur=(new Date(op.endTime)-new Date(op.startTime))/36e5; return{'Nome':op.team,'Tipo':op.tipo||'—','Início':fdt(op.startTime),'Término':fdt(op.endTime),'Pacotes':op.packages,'Duração(h)':dur.toFixed(2),'Eficiência(pac/h)':dur>0?(op.packages/dur).toFixed(1):'0'}; });
-    const ws=XLSX.utils.json_to_sheet(data); const wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,ws,'Operações');
-    XLSX.writeFile(wb,`operacoes-${new Date().toISOString().slice(0,10)}.xlsx`);
+    const ws=XLSX.utils.json_to_sheet(data);const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Operações');
+    XLSX.writeFile(wb,`operacoes-${today()}.xlsx`);
   },
   limpar(){ document.getElementById('modalOk').classList.add('open'); },
-  confirmar(){ S.ops=[]; S.filteredOps=[]; S.teamColors={}; S.cidx=0; closeModal(); sv(); this.render(); }
+  confirmar(){ S.ops=[];S.filteredOps=[];S.teamColors={};S.cidx=0;closeModal('modalOk');sv();this.render(); }
 };
 
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 //  M — PORTAL MOTORISTA
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 const M = {
   addEmpresa(){
     const n=document.getElementById('mfNovaEmp').value.trim(); if(!n) return;
@@ -1029,9 +1240,8 @@ const M = {
     const c=clr(nome);
     const mot={id:Date.now(),nome,wpp,empresa:emp,pacotes:pkgs,status:'fila',docaId:null,ini:null,color:c};
     S.motorista=mot;
-    // Entra no pool de motoristas (aparece na fila draggável do gestor)
     S.pool_motos.push({id:mot.id,nome:mot.nome,empresa:mot.empresa,pacotes:mot.pacotes,color:c,tipo:'motorista'});
-    addLog('reg',`${nome} (${emp}) chegou — ${pkgs.toLocaleString()} pac.`);
+    addLog('reg',`${nome} (${emp}) registrou chegada — ${pkgs.toLocaleString()} pac.`);
     sv(); G.render(); this.render();
   },
   iniciar(){
@@ -1047,11 +1257,7 @@ const M = {
     m.status='fim';
     const doca=S.docas.find(d=>d.motorista&&d.motorista.id===m.id);
     if(doca) G.finalizarDoca(doca.id);
-    else if(m.ini){
-      const fim=new Date().toISOString();
-      S.ops.push({id:Date.now(),team:m.nome,tipo:'motorista',startTime:m.ini,endTime:fim,packages:m.pacotes});
-      S.desc+=m.pacotes;
-    }
+    else if(m.ini){ const fim=new Date().toISOString(); S.ops.push({id:Date.now(),team:m.nome,tipo:'motorista',startTime:m.ini,endTime:fim,packages:m.pacotes}); S.desc+=m.pacotes; }
     addLog('done',`${m.nome} finalizou descarga.`);
     sv(); this.render();
   },
@@ -1063,8 +1269,8 @@ const M = {
   },
   render(){
     const m=S.motorista;
-    document.getElementById('mForm').style.display  = m?'none':'block';
-    document.getElementById('mStatus').style.display= m?'block':'none';
+    document.getElementById('mForm').style.display=m?'none':'block';
+    document.getElementById('mStatus').style.display=m?'block':'none';
     if(!m) return;
     document.getElementById('mNomeDisp').textContent=`${m.nome} · ${m.empresa} · ${m.pacotes.toLocaleString()} pac.`;
     ['msWait','msCall','msDesc','msFim'].forEach(id=>document.getElementById(id).style.display='none');
@@ -1083,22 +1289,25 @@ const M = {
   }
 };
 
-// ══════════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
 //  INIT
-// ══════════════════════════════════════════════════════
-document.addEventListener('DOMContentLoaded', ()=>{
+// ═══════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded',()=>{
   ld(); initCharts(); fillEmpSels(); D.fillDL();
-  setInterval(()=>document.getElementById('clock').textContent=new Date().toLocaleTimeString('pt-BR'), 1000);
+  const histMes=document.getElementById('histMes');
+  if(histMes) histMes.value=today().slice(0,7);
+  setInterval(()=>document.getElementById('clock').textContent=new Date().toLocaleTimeString('pt-BR'),1000);
   setInterval(()=>{
-    if(document.getElementById('sc-app').classList.contains('active')) G.render();
+    if(document.getElementById('sc-app').classList.contains('active')){
+      G.render();
+      // Atualizar carretas ativas
+      S.docas.forEach(d=>{ if(d.carreta&&d.status==='carreta'){ const ca=S.carretas_all.find(c=>c.id===d.carreta.id); if(ca&&ca.status==='ativa') CAR.render(); } });
+    }
     if(document.getElementById('sc-moto').classList.contains('active')){
       M.updTimer();
-      if(S.motorista?.status==='fila'){
-        const pos=S.pool_motos.findIndex(x=>x.id===S.motorista.id)+1;
-        const el=document.getElementById('mPos'); if(el) el.textContent=pos>0?pos:'—';
-      }
+      if(S.motorista?.status==='fila'){ const pos=S.pool_motos.findIndex(x=>x.id===S.motorista.id)+1; const el=document.getElementById('mPos'); if(el)el.textContent=pos>0?pos:'—'; }
     }
-  }, 1000);
+  },1000);
 });
 </script>
 </body>
